@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSS_Revision_Login_Page</title>
+    
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0%;
+            background-color: grey;
+        }
+        #main{
+            background-image: url(https://i.pinimg.com/originals/05/10/f4/0510f4e596283c0d961e4338565a93f3.gif);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100vw;
+            height: 100vh;
+        }
+        #top{
+            position: fixed;
+            background-color: navy;
+            /*border: 5px solid rgb(115, 255, 0);*/
+            margin: 0px;
+            width: 100vw;
+            height: 15vh;
+            
+            
+        }
+        #top_title{
+            position: fixed;
+            font-size: 3vw;
+            font-style: italic;
+            color: white;
+            left: 0vw;
+            top: 1vh;
+
+        }
+        @keyframes color_change{
+            0%{background-color: rgb(255, 56, 56);}
+            20%{background-color: rgb(196, 3, 180);}
+            40%{background-color: rgb(241, 82, 255);}
+            60%{background-color: rgb(255, 61, 61);}
+            80%{background-color: rgb(241, 82, 255);}
+            100%{background-color: rgb(196, 3, 180);}
+        }
+        #login_div{
+            position: absolute;
+            background-color: purple;
+            left: 0px;
+            top: 0px;
+            width: 25vw;
+            height: 25vh;
+            left: 50%;
+            top: 50vh;
+            transform: translate(-50%,-50%);
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            opacity: 0.8;
+            animation-name: color_change;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+
+        #login_div input{
+            width: 15vw;
+            height: 3.5vh;
+            font-size: 1.5vw;
+            display: block;
+            border: 3px ridge black;
+            border-radius: 10px;
+        }
+
+        #login_button{
+            font-size: 1.5vw;
+            border-radius: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="top">
+            <h1 id="top_title" >LSS.V.I.P</h1>
+        </div>
+        <div id="login_div" >
+            <input type="text"  id="name_input" style="display: block;" placeholder="Username:">
+            <input type="password"  id="password_input" placeholder="password:">
+            <button  id="login_button" >Login</button>
+
+        </div>
+        
+    </div>
+    <script >
+        var login_button=document.getElementById("login_button");
+        var log_div=document.getElementById("login_div");
+        var other=document.getElementById("other");
+        //username and password
+        var name_info=["Jasonken","Lyc","Kyy","Kxy","fatchicken"];
+        var password_info=["131688","0515","1101","1102","1103"];
+        login_button.addEventListener("click",function(){
+            var show_num=0
+            var name_input=document.getElementById("name_input");
+            var password_input=document.getElementById("password_input");
+            for(var i=0;i<name_info.length;i++){
+                if (name_input.value==name_info[i]){
+                    if (password_input.value==password_info[i]){
+                        alert("Welcome "+name_input.value);
+                        
+                        window.location="Home_page.html"
+                        break
+                        
+                    }
+                    else{
+                        alert("Username or Password incorect")
+                    }
+                }
+                else if (show_num==0 &&(name_input.value!=name_info[i])){
+                    
+                    alert("Username or Password incorect")
+                    show_num+=1
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>

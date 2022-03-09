@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ut_english</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0%;
+            background-color: rgb(183, 0, 255);
+        }
+        #main{
+            background-image: url(https://i.pinimg.com/originals/05/10/f4/0510f4e596283c0d961e4338565a93f3.gif);
+            background-size: 100vw 100vh;
+            background-repeat: repeat;
+            width: 100vw;
+            height: 100vh;
+        }
+        #top{
+            position: absolute;
+            background-color: navy;
+            /*border: 5px solid rgb(115, 255, 0);*/
+            margin: 0px;
+            width: 100vw;
+            height: 15vh;
+            float: left;
+        }
+        #top_title{
+            position: fixed;
+            font-size: 3vw;
+            font-style: italic;
+            color: white;
+            left: 0vw;
+            top: 1vh;
+
+        }
+        #home_button{
+            position: fixed; 
+            top: 5vh; 
+            right: 0; 
+            font-size: 2vw; 
+            border-radius: 20px; 
+            background-color: aqua;
+        }
+        #home_button:hover{
+            position: fixed; 
+            top: 5vh; 
+            right: 0; 
+            font-size: 2vw; 
+            border-radius: 20px; 
+            background-color: rgb(2, 218, 218);
+        }
+
+        #math_content{
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%,-0%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #button_void{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 1.5vw;
+        }
+        #button_void button{
+            font-size: 2vw;
+            border-radius: 20px 20px 0px 0px;
+        }
+        #button_void button:hover{
+            font-size: 2vw;
+            border-radius: 20px 20px 0px 0px;
+            background-color: aqua;
+        }
+        #scope_content{
+            width: 35vw;
+            height: 50vh;
+            border-radius: 10px;
+            background-color: grey;
+            display: flex;
+            justify-content: top;
+            align-items: center;
+            flex-direction: column;
+            gap: 0px;
+        }
+        #math_content h1{
+            height: 1.5vh;
+        }
+
+        #p1_content{
+            width: 55vw;
+            height: 260vh;
+            border-radius: 10px;
+            background-color: grey;
+            display: none;
+            justify-content: top;
+            align-items: right;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        #p2_content{
+            width: 55vw;
+            height: 330vh;
+            border-radius: 10px;
+            background-color: grey;
+            display: none;
+            justify-content: top;
+            align-items: right;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+
+        #subject_button{
+            position: fixed; 
+            top: 15vh; 
+            left: 1.1vw; 
+            font-size: 2vw; 
+            border-radius: 10px; 
+            background-color: aqua;
+        }
+        #subject_void{
+            display: none;
+            position: fixed;
+            top: 21vh;
+            left: 0vw;
+            width: 10vw;
+            height: 45vh;
+            background-color: grey;
+            border-radius: 10px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 3px;
+        }
+        #subject_void button{
+            font-size: 1.4vw;
+            background-color: aqua;
+            border-radius: 15px;
+            width: 7vw;
+        }
+
+        img{
+            width: 18vw;
+            height: 20vh;
+        }
+        img:hover{
+            width: 28vw;
+            height: 32vh;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="top">
+            <h1 id="top_title" >UT.Math</h1>
+            <button id="home_button" >HOME</button>
+            <button id="subject_button" >Subject</button>
+            <div id="subject_void">
+                <button id="chinese_btn">Chinese</button>
+                <button id="english_btn">English</button>
+                <button id="math_btn">Math</button>
+                <button id="phys_btn">Phys</button>
+                <button id="chem_btn">Chem</button>
+                <button id="bio_btn">Bio</button>
+                <button id="chis_btn">Chis</button>
+                <button id="hist_btn">Hist</button>
+                <button id="geo_btn">Geo</button>
+            </div>
+
+        </div>
+        <div id="math_content">
+            <div id="button_void">
+                <button id="scope_button" style="background-color: aqua;">UT 範圍</button>
+                <button id="p1">第6章</button>
+                <button id="p2">第8章</button>
+            </div>
+
+            <div id="scope_content" >
+                <h1 style="font-size: 2vw;">數學 UT範圍:</h1>
+                <h1 style="font-size: 2vw;">第6章:三角學應用</h1>
+                <h1 style="font-size: 2vw; margin: 2vh 0 1vh;">第8章:三角形相關定理</h1>
+            </div>
+
+            <div id="p1_content">
+                <h1 style="font-size: 2vw; ">第6章:三角學應用</h1>
+                <h1 style="font-size: 1.8vw; margin-bottom: 5vh;">1.畢氏定理(知識重溫):</h1>
+                <img src="https://www.geogebra.org/resource/UTfrmmk4/HkbycnTldrV5R0UW/material-UTfrmmk4-thumb.png" >
+
+                <h1 style="font-size: 1.8vw; margin-bottom: 5vh;  ">2.三角比(知識重溫):</h1>
+                <img src="https://img.cntofu.com/book/note/math/images/maxresdefault.jpg" width="300px" height="200px" >
+                
+                <h1 style="font-size: 1.8vw;  ">3.根式運算(知識重溫):</h1>
+                <h1 style="font-size: 1.5vw; margin:2vh 0 2vh; color: greenyellow; ">(加法Ep:  √￣2￣ + 3√￣2￣  =  (1+3)√￣2￣  =  4√￣2￣  )</h1>
+                <h1 style="font-size: 1.5vw; margin:2vh 0 2vh; color: greenyellow; ">(減法Ep:  5√￣3￣ - 4√￣3￣  =  (5+4)√￣3￣  =  √￣3￣  )</h1>
+                <h1 style="font-size: 1.5vw; margin:2vh 0 2vh; color: greenyellow; ">(乘法Ep:  √￣2￣ x √￣3￣  =  √￣2￣x￣3￣  =  √￣6￣  )</h1>
+                <h1 style="font-size: 1.5vw; margin:2vh 0 2vh; color: greenyellow; ">(除法Ep:  √￣6￣ ÷ √￣2￣  =  √￣6￣÷￣2￣  =  √￣3￣  )</h1>
+                <h1 style="font-size: 1.5vw; margin:2vh 0 2vh; color: greenyellow; ">(分母有理化Ep:  3 ÷ √￣2￣  =  3 ÷ √￣2￣ x √￣2￣ ÷ √￣2￣ =  3√￣2￣ ÷ 2 )</h1>
+
+                <h1 style="font-size: 1.8vw; margin-bottom: 5vh; ">4.特別角的三角比:</h1>
+                <img src="https://mathseasy.hk/wp-content/uploads/2013/03/trigo-ratios.png"  width="300px" height="200px" >
+
+                <h1 style="font-size: 1.8vw;  ">5.三角比的關係:</h1>
+                <h1 style="font-size: 1.5vw; margin:2vh 0 2vh; color: aqua; ">(對於任何銳角0: tanθ=sinθ÷cosθ)</h1>
+                <h1 style="font-size: 1.5vw; margin:2vh 0 2vh; color: aqua; ">(對於任何銳角0: sin²θ + cos²θ=1)</h1>
+                <h1 style="font-size: 1.5vw; margin:2vh 0 2vh; color: aqua; ">(對於任何銳角0: cos(90°-θ)=sinθ)</h1>
+                <h1 style="font-size: 1.5vw; margin:2vh 0 2vh; color: aqua; ">(對於任何銳角0: sin(90°-θ)=cosθ)</h1>
+                <h1 style="font-size: 1.5vw; margin:2vh 0 2vh; color: aqua; ">(對於任何銳角0: tan(90°-θ)= 1 ÷ cosθ)</h1>
+
+                <h1 style="font-size: 1.8vw; margin-bottom: 5vh; ">5.斜率:</h1>
+                <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmm7WY3FRaZrQ6lYOlvwf45DWXJFSBe2mQow&usqp=CAU" width="300px" height="200px" >
+                <h1 style="font-size: 1.5vw; margin:2vh 0 2vh; color: aqua; ">(傾角 = θ)</h1>
+                <h1 style="font-size: 1.5vw; margin:2vh 0 2vh; color: aqua; ">(AC斜率 = CB ÷ AB = tanθ)</h1>
+
+                <h1 style="font-size: 1.8vw; margin-bottom: 2vh; ">6.仰角&俯角:</h1>
+                <h1 style="font-size: 1.5vw; margin:2vh 0 2vh; color: aqua; ">(向上望時,視線和水平線的夾角稱為仰角)</h1>
+                <h1 style="font-size: 1.5vw; margin:2vh 0 2vh; color: aqua; ">(向下望時,視線和水平線的夾角稱為俯角)</h1>
+                <h1 style="font-size: 1.5vw; margin:2vh 0 2vh; color: aqua; ">(當兩個物體互相注視時,仰角=俯角,因為是錯角)</h1>
+
+                <h1 style="font-size: 1.8vw; margin-bottom: 5vh; ">7.方位角:</h1>
+                <img width="300px" height="200px" src="data:image/png;base64,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"  >
+                
+            </div>
+            <div id="p2_content">
+                <h1 style="font-size: 2vw; ">第8章:三角形相關定理</h1>
+                <a href="https://www.yll.url.tw/viewtopic.php?t=1546&sid=6ce0ea3938dcaa2bea09fff3a6fb4773" style="position: absolute; right: 1vw; font-size: 1.5vw; color: aqua;">三角形定理(link)</a>
+                <h1 style="font-size: 1.8vw; ">1.三角形內的重要直線:</h1>
+                <h1 style="font-size: 1.5vw; margin:2vh 0 3vh; color: aqua; ">(a.角平分線{平分三角形內角的直線})</h1>
+                <img width="300px" height="200px" src="https://i1.read01.com/zRKzJdKTLS_HDNyTmrs9_do/0.jpg" >
+                <h1 style="font-size: 1.5vw; margin:2vh 0 3vh; color: aqua; ">(b.高線{通過三角形的頂點及其對邊互相垂直的直線})</h1>
+                <img width="300px" height="200px" src="https://i1.read01.com/6sYcrXJmBCjlfFJMZ3rTEUM/0.jpg" >
+                <h1 style="font-size: 1.5vw; margin:2vh 0 3vh; color: aqua; ">(c.中線{通過三角形頂點及其對邊的中點的直線})</h1>
+                <img width="300px" height="200px" src="https://i1.read01.com/NrqUGpOaUAUhyYCqceEX3pU/0.jpg" >
+                <h1 style="font-size: 1.5vw; margin:2vh 0 3vh; color: aqua; ">(d.垂直平分線{平分三角形的邊以及垂直於該邊的直線})</h1>
+                <img width="300px" height="200px" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Math_CenterLine1.png" >
+
+                <h1 style="font-size: 1.8vw; ">2.三角形的邊及角:</h1>
+                <h1 style="font-size: 1.5vw; margin:2vh 0 3vh; color: aqua; ">(a.三角形中較大的邊所對的角較大)</h1>
+                <h1 style="font-size: 1.5vw; margin:2vh 0 3vh; color: aqua; ">(b.三角形中較大的角所對的邊較大)</h1>
+                <h1 style="font-size: 1.5vw; margin:2vh 0 3vh; color: aqua; ">(c.三角形中任意兩邊之和必定大於餘下的邊)</h1>
+
+                <h1 style="font-size: 1.8vw; ">3.三角形的中心:</h1>
+                <h1 style="font-size: 1.5vw; margin:2vh 0 3vh; color: aqua; ">(a.內心{三條角平分線相交的一點})</h1>
+                <h1 style="font-size: 1.5vw; margin:2vh 0 3vh; color: aqua; ">(a.圖中的圓形是角ABC內切圓)</h1>
+                <img width="300px" height="200px" src="https://upload.wikimedia.org/wikipedia/commons/5/59/%E4%B8%89%E8%A7%92%E5%BD%A2%E3%81%AE%E5%86%85%E5%BF%83.png" >
+                <h1 style="font-size: 1.5vw; margin:2vh 0 3vh; color: aqua; ">(b.外心{三條垂直平分線相交的一點})</h1>
+                <h1 style="font-size: 1.5vw; margin:2vh 0 3vh; color: aqua; ">(b.圖中的圓形是角ABC外接圓)</h1>
+                <img width="300px" height="200px" src="https://upload.wikimedia.org/wikipedia/commons/a/a1/%E4%B8%89%E8%A7%92%E5%BD%A2%E3%81%AE%E5%A4%96%E5%BF%83.png" >
+                <h1 style="font-size: 1.5vw; margin:2vh 0 3vh; color: aqua; ">(c.形心{三條中線相交的一點})</h1>
+                <img width="300px" height="200px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Triangle.Centroid.svg/330px-Triangle.Centroid.svg.png" >
+                <h1 style="font-size: 1.5vw; margin:2vh 0 3vh; color: aqua; ">(d.垂心{三條高線相交的一點})</h1>
+                <img width="300px" height="200px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Triangle.Orthocenter.svg/330px-Triangle.Orthocenter.svg.png" >
+
+
+            </div>
+            
+            
+            
+        </div>
+        
+    </div>
+    <script>
+        var home_button=document.getElementById("home_button")
+
+        var scope_button=document.getElementById("scope_button")
+        var p1_button=document.getElementById("p1")
+        var p2_button=document.getElementById("p2")
+        var main=document.getElementById("main")
+        var scope_content=document.getElementById("scope_content")
+        var p1_content=document.getElementById("p1_content")
+        var p2_content=document.getElementById("p2_content")
+
+        var subject_void=document.getElementById("subject_void")
+        var subject_button=document.getElementById("subject_button")
+        var chinese_btn=document.getElementById("chinese_btn")
+        var english_btn=document.getElementById("english_btn")
+        var math_btn=document.getElementById("math_btn")
+        var phys_btn=document.getElementById("phys_btn")
+        var chem_btn=document.getElementById("chem_btn")
+        var bio_btn=document.getElementById("bio_btn")
+        var chis_btn=document.getElementById("chis_btn")
+        var hist_btn=document.getElementById("hist_btn")
+        var geo_btn=document.getElementById("geo_btn")
+         
+        var num1=0
+        subject_button.addEventListener("click",function(){
+            if (num1==0){
+                subject_void.style.display="flex"
+                num1=1
+            }
+            else{
+                subject_void.style.display="none"
+                num1=0
+            }
+            
+        })
+        chinese_btn.addEventListener("click",function(){
+            window.location=("ut_chinese.html")
+        })
+        english_btn.addEventListener("click",function(){
+            window.location=("ut_english.html")
+        })
+        math_btn.addEventListener("click",function(){
+            window.location=("ut_math.html")
+        })
+        phys_btn.addEventListener("click",function(){
+            window.location=("ut_phys.html")
+        })
+        chem_btn.addEventListener("click",function(){
+            window.location=("ut_chem.html")
+        })
+        bio_btn.addEventListener("click",function(){
+            window.location=("ut_bio.html")
+        })
+        chis_btn.addEventListener("click",function(){
+            window.location=("ut_chis.html")
+        })
+        hist_btn.addEventListener("click",function(){
+            window.location=("ut_hist.html")
+        })
+        geo_btn.addEventListener("click",function(){
+            window.location=("ut_geo.html")
+        })
+
+        scope_button.addEventListener("click",function(){
+            scope_button.style.backgroundColor="aqua"
+            p1_button.style.backgroundColor="white"
+            p2_button.style.backgroundColor="white"
+            scope_content.style.display="flex"
+            p1_content.style.display="none"
+            p2_content.style.display="none"
+            main.style.height="100vh"
+
+        })
+        p1_button.addEventListener("click",function(){
+            scope_button.style.backgroundColor="white"
+            p1_button.style.backgroundColor="aqua"
+            p2_button.style.backgroundColor="white"
+            scope_content.style.display="none"
+            p1_content.style.display="flex"
+            p2_content.style.display="none"
+            main.style.height="290vh"
+
+        })
+
+        p2_button.addEventListener("click",function(){
+            scope_button.style.backgroundColor="white"
+            p1_button.style.backgroundColor="white"
+            p2_button.style.backgroundColor="aqua"
+            scope_content.style.display="none"
+            p1_content.style.display="none"
+            p2_content.style.display="flex"
+            main.style.height="360vh"
+
+        })
+
+
+        home_button.addEventListener("click",function(){
+            window.location="Home_page.html"
+        })
+    </script>
+</body>
+</html>

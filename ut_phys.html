@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ut_english</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0%;
+            background-color: rgb(183, 0, 255);
+        }
+        #main{
+            background-image: url(https://i.pinimg.com/originals/05/10/f4/0510f4e596283c0d961e4338565a93f3.gif);
+            background-size: 100vw 100vh;
+            background-repeat: repeat;
+            width: 100vw;
+            height: 100vh;
+        }
+        #top{
+            position: absolute;
+            background-color: navy;
+            /*border: 5px solid rgb(115, 255, 0);*/
+            margin: 0px;
+            width: 100vw;
+            height: 15vh;
+            float: left;
+        }
+        #top_title{
+            position: fixed;
+            font-size: 3vw;
+            font-style: italic;
+            color: white;
+            left: 0vw;
+            top: 1vh;
+
+        }
+        #home_button{
+            position: fixed; 
+            top: 5vh; 
+            right: 0; 
+            font-size: 2vw; 
+            border-radius: 20px; 
+            background-color: aqua;
+        }
+        #home_button:hover{
+            position: fixed; 
+            top: 5vh; 
+            right: 0; 
+            font-size: 2vw; 
+            border-radius: 20px; 
+            background-color: rgb(2, 218, 218);
+        }
+
+        #phys_content{
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%,-0%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #button_void{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 1.5vw;
+        }
+        #button_void button{
+            font-size: 2vw;
+            border-radius: 20px 20px 0px 0px;
+        }
+        #button_void button:hover{
+            font-size: 2vw;
+            border-radius: 20px 20px 0px 0px;
+            background-color: aqua;
+        }
+        #scope_content{
+            width: 25vw;
+            height: 50vh;
+            border-radius: 10px;
+            background-color: grey;
+            display: flex;
+            justify-content: top;
+            align-items: center;
+            flex-direction: column;
+            gap: 0px;
+        }
+        #phys_content h1{
+            height: 1.5vh;
+        }
+
+        #p1_content{
+            width: 55vw;
+            height: 340vh;
+            border-radius: 10px;
+            background-color: grey;
+            display: none;
+            justify-content: top;
+            align-items: right;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        #p2_content{
+            width: 55vw;
+            height: 190vh;
+            border-radius: 10px;
+            background-color: grey;
+            display: none;
+            justify-content: top;
+            align-items: right;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+
+        #subject_button{
+            position: fixed; 
+            top: 15vh; 
+            left: 1.1vw; 
+            font-size: 2vw; 
+            border-radius: 10px; 
+            background-color: aqua;
+        }
+        #subject_void{
+            display: none;
+            position: fixed;
+            top: 21vh;
+            left: 0vw;
+            width: 10vw;
+            height: 45vh;
+            background-color: grey;
+            border-radius: 10px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 3px;
+        }
+        #subject_void button{
+            font-size: 1.4vw;
+            background-color: aqua;
+            border-radius: 15px;
+            width: 7vw;
+        }
+        img{
+            width: 18vw;
+            height: 20vh;
+        }
+        img:hover{
+            width: 28vw;
+            height: 32vh;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="top">
+            <h1 id="top_title" >UT.Math</h1>
+            <button id="home_button" >HOME</button>
+            <button id="subject_button" >Subject</button>
+            <div id="subject_void">
+                <button id="chinese_btn">Chinese</button>
+                <button id="english_btn">English</button>
+                <button id="math_btn">Math</button>
+                <button id="phys_btn">Phys</button>
+                <button id="chem_btn">Chem</button>
+                <button id="bio_btn">Bio</button>
+                <button id="chis_btn">Chis</button>
+                <button id="hist_btn">Hist</button>
+                <button id="geo_btn">Geo</button>
+            </div>
+
+        </div>
+        <div id="phys_content">
+            <div id="button_void">
+                <button id="scope_button" style="background-color: aqua;">UT 範圍</button>
+                <button id="p1">2.1</button>
+                <button id="p2">2.2</button>
+            </div>
+
+            <div id="scope_content" >
+                <h1 style="font-size: 2vw;">物理 UT範圍:</h1>
+                <h1 style="font-size: 2vw;">2.1:光的折射</h1>
+                <h1 style="font-size: 2vw; margin: 2vh 0 1vh;">2.2:全內反射</h1>
+            </div>
+
+            <div id="p1_content">
+                <h1 style="font-size: 2vw; ">2.1:光的折射</h1>
+                <h1 style="font-size: 1.8vw; margin-bottom: 5vh;">1.折射:</h1>
+                <img width="300px" height="200px" src="https://www.phyworld.idv.tw/Nature/Jun_2/htm/B3_4-3_POINT_files/image013.jpg" >
+                <h1 style="font-size: 1.5vw; margin-bottom: 5vh; color: aqua; ">(光線從一種介質射向另一介質時,部分光線越過交界面,並改變了方向,這現象稱為折射.)</h1>
+                <h1 style="font-size: 1.5vw;  color: aqua; ">(當光線從一種介質傳播到另一種介質時,會同時發生反射和折射.)</h1>
+                <h1 style="font-size: 1.5vw;  color: aqua; ">(折射是由於光從一種介質傳播到另一種介質時,光速的變化而引起的.)</h1>
+                <h1 style="font-size: 1.5vw;  color: aqua; ">(介質Ep: 水,空氣,玻璃等)</h1>
+
+                <h1 style="font-size: 1.8vw; ">2.特別情況:</h1>
+                <h1 style="font-size: 1.5vw;  color: aqua; ">(a.光線在交界面上也出現折射)</h1>
+                <h1 style="font-size: 1.5vw;  color: aqua; ">(b.光線的入射角=0°時,光線不會偏折)</h1>
+
+                <h1 style="font-size: 1.8vw; ">3.較快的介質到較慢的介質:</h1>
+                <h1 style="font-size: 1.5vw; margin:2vh 0 2vh; color: greenyellow; ">(Ep1: 光從空氣斜射入玻璃塊時會偏向法線.)</h1>
+                <h1 style="font-size: 1.5vw; margin:2vh 0 2vh; color: greenyellow; ">(Ep2: 光從玻璃塊斜射入空氣時會偏離法線.)</h1>
+                <h1 style="font-size: 1.5vw; margin:2vh 0 2vh; color: greenyellow; ">(Ep3: 如果光沿著法線進入玻璃快就不會偏折.)</h1>
+
+                <h1 style="font-size: 1.8vw; ">4.日常生活中的例子:</h1>
+                <h1 style="font-size: 1.5vw; margin:2vh 0 2vh; color: greenyellow; ">(Ep1: 水中的半截筷子看是折曲了.)</h1>
+                <h1 style="font-size: 1.5vw; margin:2vh 0 2vh; color: greenyellow; ">(Ep2: 在水中的物體看起來比實際更接近水面.)</h1>
+
+                <h1 style="font-size: 1.8vw; ">5.像的位置:</h1>
+                <h1 style="font-size: 1.5vw;  color: aqua; ">(a.如果從物體射出的光線到眼睛前出現折射,物體的位置就會看似上升.)</h1>
+                <h1 style="font-size: 1.5vw;  color: aqua; ">(b.在水面上觀察水中物體時,水中物體看似在較高的位置.)</h1>
+
+                <h1 style="font-size: 1.8vw; margin-bottom: 5vh;">6.繪畫光線圖:</h1>
+                <img width="300px" height="200px" src="https://s3-ap-northeast-1.amazonaws.com/ehanlin-keyword/image/629743.jpg" >
+                <h1 style="font-size: 1.5vw;  color: aqua; ">(步驟1.光錐從水中的物體射出.)</h1>
+                <h1 style="font-size: 1.5vw;  color: aqua; ">(步驟2.光錐到達水和空氣的交界面時出現折離法線,然後射進觀察者的眼睛.)</h1>
+                <h1 style="font-size: 1.5vw;  color: aqua; ">(步驟3.把折射光線向後延長,光線相交的位置就是觀察者看到像的位置.)</h1>
+
+                <h1 style="font-size: 1.8vw; ">7.折射率和折射定率:</h1>
+                <h1 style="font-size: 1.5vw;  color: aqua; ">(1.光從空氣斜射入另一介質時,該介質的折射率越高,光的偏折幅度大.)</h1>
+                <h1 style="font-size: 1.5vw;  color: aqua; margin-bottom: 5vh;">(2.光從折射率較低的介質斜射入折射率較高的介質時,會偏向法線,沿相反方向傳播時,則會偏離法線.)</h1>
+                <h1 style="font-size: 1.5vw;  color: aqua; ">(3.介質的折射率n沒有單位,n越大,介質越密.)</h1>
+
+                <h1 style="font-size: 1.8vw; ">8.折射定律:</h1>
+                <h1 style="font-size: 1.5vw;  color: aqua; ">(1.入射線,折射線與法線在同一平面上.)</h1>
+                <h1 style="font-size: 1.5vw;  color: aqua; ">(2.入射角(i)與折射角(r)的關係式 = {sin(i)÷sin(r)=常數})</h1>
+
+                <h1 style="font-size: 1.8vw; ">9.介質折射率(n):</h1>
+                <h1 style="font-size: 1.5vw;  color: aqua; ">(n(折射率) = sinθ(1) ÷ sinθ(2))</h1>
+                <h1 style="font-size: 1.5vw;  color: aqua; ">((sinθ(1))分子一定是空氣)</h1>
+
+                <h1 style="font-size: 1.8vw; ">10.斯涅耳定律(適用於任何兩種介質):</h1>
+                <h1 style="font-size: 1.5vw;  color: aqua; ">(n(1) x sinθ(1) = n(2) sinθ(2))</h1>
+                <h1 style="font-size: 1.5vw;  color: aqua; ">(如果折射開始時的介質=折射完結時的介質,θ側相同)</h1>
+
+                <h1 style="font-size: 1.8vw; ">11.光速與折射:</h1>
+                <h1 style="font-size: 1.5vw;  color: aqua; ">(1.光在不同介質中的速度不同)</h1>
+                <h1 style="font-size: 1.5vw;  color: aqua; ">(2.n = C(光在真空中的速率) ÷ V(光在該介質中的速率))</h1>
+                <h1 style="font-size: 1.5vw;  color: aqua; margin-bottom: 5vh;">(3.折射率(n)較大的介質,光學密度較高,光速較小;折射率(n)較小的介質,光學密度較低,光速較大.)</h1>
+                <h1 style="font-size: 1.5vw;  color: aqua; margin-bottom: 5vh;">(4.一些介質的折射率: 真空=1,空氣=1.00,水=1.33,植物油=1.47,有機玻璃=1.50,玻璃=1.50-1.70,鑽石=2.42)</h1>
+
+                <h1 style="font-size: 1.8vw; ">12.色散:</h1>
+                <h1 style="font-size: 1.5vw;  color: aqua; ">(1.白光有不同顏色的光混合而成,因此白光通過稜鏡時會散開成不同的光.)</h1>
+                <h1 style="font-size: 1.5vw;  color: aqua; ">(2.除了在空氣中或真空中之外,不同色光在其他介質中的速率和折射率都不同.)</h1>
+                <h1 style="font-size: 1.5vw;  color: aqua; ">(3.不同色光的折射程度不同,因此會散開成色譜.)</h1>
+                <h1 style="font-size: 1.5vw;  color: aqua; ">(4.在不同顏色中,紅光在玻璃中的速率最快(折射率最小).)</h1>
+
+
+                
+                
+            </div>
+            <div id="p2_content">
+                <h1 style="font-size: 2vw; ">2.2:全內反射</h1>
+                <h1 style="font-size: 1.8vw; ">1.光線發生全內反射的須符合的條件:</h1>
+                <h1 style="font-size: 1.5vw;  color: aqua; ">(1.光由折射率較高的介質射向折射率較低的介質.)</h1>
+                <h1 style="font-size: 1.5vw;  color: aqua; ">(2.入射角比臨界角大.)</h1>
+
+                <h1 style="font-size: 1.8vw; margin-bottom: 5vh;">2.認識全內反射:</h1>
+                <img width="300px" height="200px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Reflexion_totale_interne.png/300px-Reflexion_totale_interne.png" >
+                <h1 style="font-size: 1.5vw;  color: aqua; ">(1.光線從玻璃射向空氣時,部分光會折射,餘下的光就會反射.)</h1>
+                <h1 style="font-size: 1.5vw;  color: aqua; ">(2.折射角等於90°時,入射角(i)等於臨界角(C).)</h1>
+
+                <h1 style="font-size: 1.8vw; ">3.全內反射的應用:</h1>
+                <h1 style="font-size: 1.5vw; margin:2vh 0 2vh; color: greenyellow; ">(Ep:雙筒望遠鏡,車尾反光板,貓眼石.)</h1>
+
+                <h1 style="font-size: 1.8vw; ">4.光纖:</h1>
+                <h1 style="font-size: 1.5vw;  color: aqua; margin-bottom: 5vh;">(光纖屈曲後仍可藉全內反射把光由一端傳送到另一端,信號經一連串全內反射從一端傳送到另一端)</h1>
+                
+                <h1 style="font-size: 1.8vw; ">5.鑽石:</h1>
+                <h1 style="font-size: 1.5vw;  color: aqua; margin-bottom: 10vh;">(鑽石閃耀奪目因為他的折射率很高,鑽石與空氣交界的臨界角為24度,<br/>大部分進入鑽石內的光都會經全內反射,從鑽石的頂部射出,<br/>令鑽石閃閃生輝.)</h1>
+            
+                <h1 style="font-size: 1.8vw; ">6.海市蜃樓:</h1>
+                <h1 style="font-size: 1.5vw;  color: aqua; margin-bottom: 40vh;">(冷空氣的密度比暖空氣大，因此有較大的折射率。當光線由冷空氣進入有着明確邊界的暖空氣，<br/>光線會彎曲偏離溫度梯度的方向；當光線由暖空氣進入冷空氣，它們會偏向接近梯度的方向。<br/>如果接近地面的空氣比更上面的溫暖，光線會彎曲成朝上呈現凹線的軌跡。<br/>一旦光線抵達觀測者的眼睛，視覺皮層將解釋成它是沿着「視線」筆直的前進，<br/>然而這條線只是它抵達人眼處弧線的切線方向。結果是天空上的下蜃景似乎是在地面上。<br/>觀測者可能會錯誤的解釋這些景象是水反射至空中的，對大腦而言，這是較為合理和常發生的。)</h1>
+            
+                <h1 style="font-size: 1.8vw; ">7.魚眼視域:</h1>
+                <h1 style="font-size: 1.5vw;  color: aqua; ">(就於光出現全內反射,水底的人能看到水面上所有方向的事物,不過事域會壓縮成一個圓形.)</h1>
+                
+            </div>
+            
+            
+            
+        </div>
+        
+    </div>
+    <script>
+        var home_button=document.getElementById("home_button")
+
+        var scope_button=document.getElementById("scope_button")
+        var p1_button=document.getElementById("p1")
+        var p2_button=document.getElementById("p2")
+        var main=document.getElementById("main")
+        var scope_content=document.getElementById("scope_content")
+        var p1_content=document.getElementById("p1_content")
+        var p2_content=document.getElementById("p2_content")
+
+        var subject_void=document.getElementById("subject_void")
+        var subject_button=document.getElementById("subject_button")
+        var chinese_btn=document.getElementById("chinese_btn")
+        var english_btn=document.getElementById("english_btn")
+        var math_btn=document.getElementById("math_btn")
+        var phys_btn=document.getElementById("phys_btn")
+        var chem_btn=document.getElementById("chem_btn")
+        var bio_btn=document.getElementById("bio_btn")
+        var chis_btn=document.getElementById("chis_btn")
+        var hist_btn=document.getElementById("hist_btn")
+        var geo_btn=document.getElementById("geo_btn")
+         
+        var num1=0
+        subject_button.addEventListener("click",function(){
+            if (num1==0){
+                subject_void.style.display="flex"
+                num1=1
+            }
+            else{
+                subject_void.style.display="none"
+                num1=0
+            }
+            
+        })
+        chinese_btn.addEventListener("click",function(){
+            window.location=("ut_chinese.html")
+        })
+        english_btn.addEventListener("click",function(){
+            window.location=("ut_english.html")
+        })
+        math_btn.addEventListener("click",function(){
+            window.location=("ut_math.html")
+        })
+        phys_btn.addEventListener("click",function(){
+            window.location=("ut_phys.html")
+        })
+        chem_btn.addEventListener("click",function(){
+            window.location=("ut_chem.html")
+        })
+        bio_btn.addEventListener("click",function(){
+            window.location=("ut_bio.html")
+        })
+        chis_btn.addEventListener("click",function(){
+            window.location=("ut_chis.html")
+        })
+        hist_btn.addEventListener("click",function(){
+            window.location=("ut_hist.html")
+        })
+        geo_btn.addEventListener("click",function(){
+            window.location=("ut_geo.html")
+        })
+
+        scope_button.addEventListener("click",function(){
+            scope_button.style.backgroundColor="aqua"
+            p1_button.style.backgroundColor="white"
+            p2_button.style.backgroundColor="white"
+            scope_content.style.display="flex"
+            p1_content.style.display="none"
+            p2_content.style.display="none"
+            main.style.height="100vh"
+
+        })
+        p1_button.addEventListener("click",function(){
+            scope_button.style.backgroundColor="white"
+            p1_button.style.backgroundColor="aqua"
+            p2_button.style.backgroundColor="white"
+            scope_content.style.display="none"
+            p1_content.style.display="flex"
+            p2_content.style.display="none"
+            main.style.height="370vh"
+
+        })
+
+        p2_button.addEventListener("click",function(){
+            scope_button.style.backgroundColor="white"
+            p1_button.style.backgroundColor="white"
+            p2_button.style.backgroundColor="aqua"
+            scope_content.style.display="none"
+            p1_content.style.display="none"
+            p2_content.style.display="flex"
+            main.style.height="220vh"
+
+        })
+
+
+        home_button.addEventListener("click",function(){
+            window.location="Home_page.html"
+        })
+    </script>
+</body>
+</html>
