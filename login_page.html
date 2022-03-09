@@ -107,6 +107,7 @@
         var password_info=["131688","0515","1101","1102","1103","0000"];
         login_button.addEventListener("click",function(){
             var show_num=0
+            var show_num2=0
             var name_input=document.getElementById("name_input");
             var password_input=document.getElementById("password_input");
             for(var i=0;i<name_info.length;i++){
@@ -118,8 +119,9 @@
                         break
                         
                     }
-                    else{
+                    else if (show_num2==0 &&(password_input.value!=name_info[i])){
                         alert("Username or Password incorect")
+                        show_num2+=1
                     }
                 }
                 else if (show_num==0 &&(name_input.value!=name_info[i])){
