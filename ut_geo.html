@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ut_geographic</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0%;
+            background-color: rgb(183, 0, 255);
+        }
+        #main{
+            background-image: url(https://i.pinimg.com/originals/05/10/f4/0510f4e596283c0d961e4338565a93f3.gif);
+            background-size: 100vw 100vh;
+            background-repeat: repeat;
+            width: 100vw;
+            height: 100vh;
+        }
+        #top{
+            position: absolute;
+            background-color: navy;
+            /*border: 5px solid rgb(115, 255, 0);*/
+            margin: 0px;
+            width: 100vw;
+            height: 15vh;
+            float: left;
+        }
+        #top_title{
+            position: fixed;
+            font-size: 3vw;
+            font-style: italic;
+            color: white;
+            left: 0vw;
+            top: 1vh;
+
+        }
+        #home_button{
+            position: fixed; 
+            top: 5vh; 
+            right: 0; 
+            font-size: 2vw; 
+            border-radius: 20px; 
+            background-color: aqua;
+        }
+        #home_button:hover{
+            position: fixed; 
+            top: 5vh; 
+            right: 0; 
+            font-size: 2vw; 
+            border-radius: 20px; 
+            background-color: rgb(2, 218, 218);
+        }
+
+        #geo_content{
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%,-0%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #button_void{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 1.5vw;
+        }
+        #button_void button{
+            font-size: 2vw;
+            border-radius: 20px 20px 0px 0px;
+        }
+        #button_void button:hover{
+            font-size: 2vw;
+            border-radius: 20px 20px 0px 0px;
+            background-color: aqua;
+        }
+        #scope_content{
+            width: 35vw;
+            height: 50vh;
+            border-radius: 10px;
+            background-color: grey;
+            display: flex;
+            justify-content: top;
+            align-items: center;
+            flex-direction: column;
+            gap: 0px;
+        }
+        #geo_content h1{
+            height: 1.5vh;
+        }
+
+        #p1_content{
+            width: 55vw;
+            height: 260vh;
+            border-radius: 10px;
+            background-color: grey;
+            display: none;
+            justify-content: top;
+            align-items: right;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        #p2_content{
+            width: 55vw;
+            height: 330vh;
+            border-radius: 10px;
+            background-color: grey;
+            display: none;
+            justify-content: top;
+            align-items: right;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+
+        #subject_button{
+            position: fixed; 
+            top: 15vh; 
+            left: 1.1vw; 
+            font-size: 2vw; 
+            border-radius: 10px; 
+            background-color: aqua;
+        }
+        #subject_void{
+            display: none;
+            position: fixed;
+            top: 21vh;
+            left: 0vw;
+            width: 10vw;
+            height: 45vh;
+            background-color: grey;
+            border-radius: 10px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 3px;
+        }
+        #subject_void button{
+            font-size: 1.4vw;
+            background-color: aqua;
+            border-radius: 15px;
+            width: 7vw;
+        }
+
+        img{
+            width: 18vw;
+            height: 20vh;
+        }
+        img:hover{
+            width: 28vw;
+            height: 32vh;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="top">
+            <h1 id="top_title" >UT.Geographic</h1>
+            <button id="home_button" >HOME</button>
+            <button id="subject_button" >Subject</button>
+            <div id="subject_void">
+                <button id="chinese_btn">Chinese</button>
+                <button id="english_btn">English</button>
+                <button id="math_btn">Math</button>
+                <button id="phys_btn">Phys</button>
+                <button id="chem_btn">Chem</button>
+                <button id="bio_btn">Bio</button>
+                <button id="chis_btn">Chis</button>
+                <button id="hist_btn">Hist</button>
+                <button id="geo_btn">Geo</button>
+            </div>
+            <h2 style="position: fixed; bottom: 0; right: 0; color: aqua;">Producer : 3D18 :)</h2>
+        </div>
+        <div id="geo_content">
+            <div id="button_void">
+                <button id="scope_button" style="background-color: aqua;">UT 範圍</button>
+                <button id="p1">單元 6.1</button>
+                <button id="p2">單元 6.2</button>
+            </div>
+
+            <div id="scope_content" >
+                <h1 style="font-size: 2vw;">地理 UT範圍:</h1>
+                <h1 style="font-size: 2vw;">第六冊:製造業全球轉移</h1>
+                <h1 style="font-size: 2vw; margin: 2vh 0 1vh;">單元 6.1 ~ 6.2</h1>
+            </div>
+
+            <div id="p1_content">
+                <h1 style="font-size: 2vw; ">單元 6.1 (什麼是製造業)</h1>
+                <h1 style="font-size: 1.5vw; margin:2vh 0 2vh; color: aqua; "></h1>
+                <h1 style="font-size: 1.8vw; margin-bottom: 5vh; "></h1>
+                
+                
+            </div>
+            <div id="p2_content">
+                <h1 style="font-size: 2vw; ">單元 6.2 (我們的工廠都到哪裏去了)</h1>
+                <h1 style="font-size: 1.5vw; margin:2vh 0 3vh; color: aqua; "></h1>
+                
+
+
+            </div>
+            
+            
+            
+        </div>
+        
+    </div>
+    <script>
+        var home_button=document.getElementById("home_button")
+
+        var scope_button=document.getElementById("scope_button")
+        var p1_button=document.getElementById("p1")
+        var p2_button=document.getElementById("p2")
+        var main=document.getElementById("main")
+        var scope_content=document.getElementById("scope_content")
+        var p1_content=document.getElementById("p1_content")
+        var p2_content=document.getElementById("p2_content")
+
+        var subject_void=document.getElementById("subject_void")
+        var subject_button=document.getElementById("subject_button")
+        var chinese_btn=document.getElementById("chinese_btn")
+        var english_btn=document.getElementById("english_btn")
+        var math_btn=document.getElementById("math_btn")
+        var phys_btn=document.getElementById("phys_btn")
+        var chem_btn=document.getElementById("chem_btn")
+        var bio_btn=document.getElementById("bio_btn")
+        var chis_btn=document.getElementById("chis_btn")
+        var hist_btn=document.getElementById("hist_btn")
+        var geo_btn=document.getElementById("geo_btn")
+         
+        var num1=0
+        subject_button.addEventListener("click",function(){
+            if (num1==0){
+                subject_void.style.display="flex"
+                num1=1
+            }
+            else{
+                subject_void.style.display="none"
+                num1=0
+            }
+            
+        })
+        chinese_btn.addEventListener("click",function(){
+            window.location=("ut_chinese.html")
+        })
+        english_btn.addEventListener("click",function(){
+            window.location=("ut_english.html")
+        })
+        math_btn.addEventListener("click",function(){
+            window.location=("ut_math.html")
+        })
+        phys_btn.addEventListener("click",function(){
+            window.location=("ut_phys.html")
+        })
+        chem_btn.addEventListener("click",function(){
+            window.location=("ut_chem.html")
+        })
+        bio_btn.addEventListener("click",function(){
+            window.location=("ut_bio.html")
+        })
+        chis_btn.addEventListener("click",function(){
+            window.location=("ut_chis.html")
+        })
+        hist_btn.addEventListener("click",function(){
+            window.location=("ut_hist.html")
+        })
+        geo_btn.addEventListener("click",function(){
+            window.location=("ut_geo.html")
+        })
+
+        scope_button.addEventListener("click",function(){
+            scope_button.style.backgroundColor="aqua"
+            p1_button.style.backgroundColor="white"
+            p2_button.style.backgroundColor="white"
+            scope_content.style.display="flex"
+            p1_content.style.display="none"
+            p2_content.style.display="none"
+            main.style.height="100vh"
+
+        })
+        p1_button.addEventListener("click",function(){
+            scope_button.style.backgroundColor="white"
+            p1_button.style.backgroundColor="aqua"
+            p2_button.style.backgroundColor="white"
+            scope_content.style.display="none"
+            p1_content.style.display="flex"
+            p2_content.style.display="none"
+            main.style.height="290vh"
+
+        })
+
+        p2_button.addEventListener("click",function(){
+            scope_button.style.backgroundColor="white"
+            p1_button.style.backgroundColor="white"
+            p2_button.style.backgroundColor="aqua"
+            scope_content.style.display="none"
+            p1_content.style.display="none"
+            p2_content.style.display="flex"
+            main.style.height="360vh"
+
+        })
+
+
+        home_button.addEventListener("click",function(){
+            window.location="Home_page.html"
+        })
+    </script>
+</body>
+</html>

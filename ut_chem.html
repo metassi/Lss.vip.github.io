@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ut_chemistry</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0%;
+            background-color: rgb(183, 0, 255);
+        }
+        #main{
+            background-image: url(https://i.pinimg.com/originals/05/10/f4/0510f4e596283c0d961e4338565a93f3.gif);
+            background-size: 100vw 100vh;
+            background-repeat: repeat;
+            width: 100vw;
+            height: 100vh;
+        }
+        #top{
+            position: absolute;
+            background-color: navy;
+            /*border: 5px solid rgb(115, 255, 0);*/
+            margin: 0px;
+            width: 100vw;
+            height: 15vh;
+            float: left;
+        }
+        #top_title{
+            position: fixed;
+            font-size: 3vw;
+            font-style: italic;
+            color: white;
+            left: 0vw;
+            top: 1vh;
+
+        }
+        #home_button{
+            position: fixed; 
+            top: 5vh; 
+            right: 0; 
+            font-size: 2vw; 
+            border-radius: 20px; 
+            background-color: aqua;
+        }
+        #home_button:hover{
+            position: fixed; 
+            top: 5vh; 
+            right: 0; 
+            font-size: 2vw; 
+            border-radius: 20px; 
+            background-color: rgb(2, 218, 218);
+        }
+
+        #chem_content{
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%,-0%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #button_void{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 1.5vw;
+        }
+        #button_void button{
+            font-size: 2vw;
+            border-radius: 20px 20px 0px 0px;
+        }
+        #button_void button:hover{
+            font-size: 2vw;
+            border-radius: 20px 20px 0px 0px;
+            background-color: aqua;
+        }
+        #scope_content{
+            width: 40vw;
+            height: 50vh;
+            border-radius: 10px;
+            background-color: grey;
+            display: flex;
+            justify-content: top;
+            align-items: center;
+            flex-direction: column;
+            gap: 0px;
+        }
+        #chem_content h1{
+            height: 1.8vh;
+        }
+
+        #g6a_content{
+            width: 55vw;
+            height: 175vh;
+            border-radius: 10px;
+            background-color: grey;
+            display: none;
+            justify-content: top;
+            align-items: right;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        #g6c_content{
+            width: 55vw;
+            height: 440vh;
+            border-radius: 10px;
+            background-color: grey;
+            display: none;
+            justify-content: top;
+            align-items: right;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        #g8c_content{
+            width: 55vw;
+            height: 720vh;
+            border-radius: 10px;
+            background-color: grey;
+            display: none;
+            justify-content: top;
+            align-items: right;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        #subject_button{
+            position: fixed; 
+            top: 15vh; 
+            left: 1.1vw; 
+            font-size: 2vw; 
+            border-radius: 10px; 
+            background-color: aqua;
+        }
+        #subject_void{
+            display: none;
+            position: fixed;
+            top: 21vh;
+            left: 0vw;
+            width: 10vw;
+            height: 45vh;
+            background-color: grey;
+            border-radius: 10px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 3px;
+        }
+        #subject_void button{
+            font-size: 1.4vw;
+            background-color: aqua;
+            border-radius: 15px;
+            width: 7vw;
+    
+        }
+        img{
+            width: 18vw;
+            height: 29vh;
+        }
+        img:hover{
+            width: 30vw;
+            height: 42vh;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="top">
+            <h1 id="top_title" >UT.Chemistry</h1>
+            <button id="home_button" >HOME</button>
+            <button id="subject_button" >Subject</button>
+            <div id="subject_void">
+                <button id="chinese_btn">Chinese</button>
+                <button id="english_btn">English</button>
+                <button id="math_btn">Math</button>
+                <button id="phys_btn">Phys</button>
+                <button id="chem_btn">Chem</button>
+                <button id="bio_btn">Bio</button>
+                <button id="chis_btn">Chis</button>
+                <button id="hist_btn">Hist</button>
+                <button id="geo_btn">Geo</button>
+            </div>
+            <h2 style="position: fixed; bottom: 0; right: 0; color: aqua;">Producer : 3D18 :)</h2>
+        </div>
+        <div id="chem_content">
+            <div id="button_void">
+                <button id="scope_button" style="background-color: aqua;">UT 範圍</button>
+                <button id="6a">原子結構</button>
+                <button id="6c">週期表</button>
+                <button id="8c">離子鍵</button>
+            </div>
+
+            <div id="scope_content" >
+                <h1 style="font-size: 2vw;">化學 UT範圍:</h1>
+                <h1 style="font-size: 2vw;">筆記(p1-35)</h1>
+                <h1 style="font-size: 2vw;">原子結構(ch.5)</h1>
+                <h1 style="font-size: 2vw;">週期表(ch.6)</h1>
+                <h1 style="font-size: 2vw; ">離子鍵(ch.7.1 ~ 7.6)</h1>
+
+                
+            </div>
+
+            <div id="g6a_content">
+                <h1 style="font-size: 2vw; ">原子結構</h1>
+                <h1 style="font-size: 1.8vw;"></h1>
+            
+            </div>
+            <div id="g6c_content">
+                <h1 style="font-size: 2vw; ">週期表</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;"></h1> 
+            
+                
+
+            </div>
+            <div id="g8c_content">
+                <h1 style="font-size: 2vw; ">離子鍵</h1>
+                <h1 style="font-size: 1.8vw;"></h1>
+                <h1 style="font-size: 1.7vw; color: rgb(0, 0, 0);"></h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;"></h1> 
+
+            
+            
+
+            
+            </div>
+            
+            
+        </div>
+        
+    </div>
+    <script>
+        var home_button=document.getElementById("home_button")
+
+        var scope_button=document.getElementById("scope_button")
+        var g6a_button=document.getElementById("6a")
+        var g6c_button=document.getElementById("6c")
+        var g8c_button=document.getElementById("8c")
+        var main=document.getElementById("main")
+        var scope_content=document.getElementById("scope_content")
+        var g6a_content=document.getElementById("g6a_content")
+        var g6c_content=document.getElementById("g6c_content")
+        var g8c_content=document.getElementById("g8c_content")
+
+        var subject_void=document.getElementById("subject_void")
+        var subject_button=document.getElementById("subject_button")
+        var chinese_btn=document.getElementById("chinese_btn")
+        var english_btn=document.getElementById("english_btn")
+        var math_btn=document.getElementById("math_btn")
+        var phys_btn=document.getElementById("phys_btn")
+        var chem_btn=document.getElementById("chem_btn")
+        var bio_btn=document.getElementById("bio_btn")
+        var chis_btn=document.getElementById("chis_btn")
+        var hist_btn=document.getElementById("hist_btn")
+        var geo_btn=document.getElementById("geo_btn")
+         
+        var num1=0
+        subject_button.addEventListener("click",function(){
+            if (num1==0){
+                subject_void.style.display="flex"
+                num1=1
+            }
+            else{
+                subject_void.style.display="none"
+                num1=0
+            }
+            
+        })
+        chinese_btn.addEventListener("click",function(){
+            window.location=("ut_chinese.html")
+        })
+        english_btn.addEventListener("click",function(){
+            window.location=("ut_english.html")
+        })
+        math_btn.addEventListener("click",function(){
+            window.location=("ut_math.html")
+        })
+        phys_btn.addEventListener("click",function(){
+            window.location=("ut_phys.html")
+        })
+        chem_btn.addEventListener("click",function(){
+            window.location=("ut_chem.html")
+        })
+        bio_btn.addEventListener("click",function(){
+            window.location=("ut_bio.html")
+        })
+        chis_btn.addEventListener("click",function(){
+            window.location=("ut_chis.html")
+        })
+        hist_btn.addEventListener("click",function(){
+            window.location=("ut_hist.html")
+        })
+        geo_btn.addEventListener("click",function(){
+            window.location=("ut_geo.html")
+        })
+
+        scope_button.addEventListener("click",function(){
+            scope_button.style.backgroundColor="aqua"
+            g6a_button.style.backgroundColor="white"
+            g6c_button.style.backgroundColor="white"
+            g8c_button.style.backgroundColor="white"
+            scope_content.style.display="flex"
+            g6a_content.style.display="none"
+            g6c_content.style.display="none"
+            g8c_content.style.display="none"
+            main.style.height="100vh"
+
+        })
+        g6a_button.addEventListener("click",function(){
+            scope_button.style.backgroundColor="white"
+            g6a_button.style.backgroundColor="aqua"
+            g6c_button.style.backgroundColor="white"
+            g8c_button.style.backgroundColor="white"
+            scope_content.style.display="none"
+            g6a_content.style.display="flex"
+            g6c_content.style.display="none"
+            g8c_content.style.display="none"
+            main.style.height="200vh"
+
+        })
+
+        g6c_button.addEventListener("click",function(){
+            scope_button.style.backgroundColor="white"
+            g6a_button.style.backgroundColor="white"
+            g6c_button.style.backgroundColor="aqua"
+            g8c_button.style.backgroundColor="white"
+            scope_content.style.display="none"
+            g6a_content.style.display="none"
+            g6c_content.style.display="flex"
+            g8c_content.style.display="none"
+            main.style.height="470vh"
+
+        })
+
+        g8c_button.addEventListener("click",function(){
+            scope_button.style.backgroundColor="white"
+            g6a_button.style.backgroundColor="white"
+            g6c_button.style.backgroundColor="white"
+            g8c_button.style.backgroundColor="aqua"
+            scope_content.style.display="none"
+            g6a_content.style.display="none"
+            g6c_content.style.display="none"
+            g8c_content.style.display="flex"
+            main.style.height="760vh"
+        })
+
+        home_button.addEventListener("click",function(){
+            window.location="Home_page.html"
+        })
+    </script>
+</body>
+</html>
