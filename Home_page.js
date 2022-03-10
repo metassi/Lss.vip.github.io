@@ -28,6 +28,13 @@ var sub_choose=document.getElementById("sub_choose")
 var clear_button=document.getElementById("clear")
 var grammar_ai_input=document.getElementById('grammar_ai_input')
 var grammar_ai_search_button=document.getElementById('grammar_ai_search_button')
+var translate_text=document.getElementById("translate")
+var future_text=document.getElementById("future")
+var continuous_text=document.getElementById("continuous")
+var past_text=document.getElementById("past")
+var past_perfect_text=document.getElementById("past_perfect")
+var participle_text=document.getElementById("participle")
+var gerunds_text=document.getElementById("gerunds")
 
 var chinese_l=true
 var english_l=false
@@ -46,7 +53,14 @@ clear_button.addEventListener("click",function(){
     other_sub_choose.style.display="none"
     num2=0
     grammar_ai.style.display="none"
-        num6=0
+    num6=0
+    translate_text.innerText=""
+    future_text.innerText=""
+    continuous_text.innerText=""
+    past_text.innerText=""
+    past_perfect_text.innerText=""
+    participle_text.innerText=""
+    gerunds_text.innerText=""
 })
 function_button.addEventListener("click",function(){
     if (num4==0){
@@ -256,23 +270,10 @@ var translate=["同意 ( verb / 動詞 )","甦醒 ( verb / 動詞 )"]
 
 
 
-var translate_result="  no-result"
-var future_result="  no-result"
-var continuous_result="  no-result"
-var past_result="  no-result"
-var participle_result="  no-result"
-var past_perfect_result="  no-result"
-var gerunds_result="  no-result"
+
 grammar_ai_search_button.addEventListener("click",function(){
-    
+    var num_g=0
     var input_text=grammar_ai_input
-    var translate_text=document.getElementById("translate")
-    var future_text=document.getElementById("future")
-    var continuous_text=document.getElementById("continuous")
-    var past_text=document.getElementById("past")
-    var past_perfect_text=document.getElementById("past_perfect")
-    var participle_text=document.getElementById("participle")
-    var gerunds_text=document.getElementById("gerunds")
     for (var i=0;i<=word.length;i++){
         if (grammar_ai_input.value==word[i])
         {
@@ -287,12 +288,23 @@ grammar_ai_search_button.addEventListener("click",function(){
             translate_text.innerText="   "+translate_result
             future_text.innerText=future_result
             continuous_text.innerText="   "+continuous_result
-            past_text.innerText=past_text.innerText+"   "+past_result
+            past_text.innerText="   "+past_result
             past_perfect_text.innerText=past_perfect_result
             participle_text.innerText="   "+participle_result
             gerunds_text.innerText="   "+gerunds_result
-        }
+            num_g=1
 
+
+        }
+    }
+    if (num_g==0){
+        translate_text.innerText="  no-result"
+        future_text.innerText="  no-result"
+        continuous_text.innerText="  no-result"
+        past_text.innerText="  no-result"
+        past_perfect_text.innerText="  no-result"
+        participle_text.innerText="  no-result"
+        gerunds_text.innerText="  no-result"
     }
     
 })
