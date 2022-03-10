@@ -22,8 +22,12 @@ var link_space=document.getElementById("link_space")
 var function_button=document.getElementById('function_button')
 var function_list=document.getElementById('function_list')
 var ut_button=document.getElementById('ut_button')
+var grammar_ai_button=document.getElementById('grammar_ai_button')
+var grammar_ai=document.getElementById('grammar_ai')
 var sub_choose=document.getElementById("sub_choose")
 var clear_button=document.getElementById("clear")
+var grammar_ai_input=document.getElementById('grammar_ai_input')
+var grammar_ai_search_button=document.getElementById('grammar_ai_search_button')
 
 var chinese_l=true
 var english_l=false
@@ -33,6 +37,7 @@ var num2=0
 var num3=0
 var num4=0
 var num5=0
+var num6=0
 clear_button.addEventListener("click",function(){
     sub_choose.style.display="none"
     num5=0
@@ -40,6 +45,8 @@ clear_button.addEventListener("click",function(){
     num1=0
     other_sub_choose.style.display="none"
     num2=0
+    grammar_ai.style.display="none"
+        num6=0
 })
 function_button.addEventListener("click",function(){
     if (num4==0){
@@ -54,14 +61,18 @@ function_button.addEventListener("click",function(){
 
 ut_button.addEventListener("click",function(){
     if (num5==0){
+        grammar_ai.style.display="none"
+        num6=0
         sub_choose.style.display="flex"
         num5=1
+        
     }
     else{
         sub_choose.style.display="none"
         num5=0
     }
 })
+
 main_sub_btn.addEventListener("click",function(){
     //window.location="main_sub_page.html"
     if (num2==1){
@@ -212,4 +223,76 @@ subject_hist.addEventListener("click",function(){
 })
 subject_geo.addEventListener("click",function(){
     window.location="ut_geo.html"
+})
+
+
+//other function
+grammar_ai_button.addEventListener("click",function(){
+    if (num6==0){
+        sub_choose.style.display="none"
+        num5=0
+        grammar_ai.style.display="flex"
+        num6=1
+    }
+    else{
+        grammar_ai.style.display="none"
+        num6=0
+    }
+})
+var word=["agree","awake"]
+// future = will + input
+var continuous=["agreeing","awaking"]
+var past=["agreed"," awoke"]
+//past_perfect = had + participle
+var participle=["agreed","awoken"]
+var gerunds=["To-infinitives","no-result"]
+var translate=["同意 ( verb / 動詞 )","甦醒 ( verb / 動詞 )"]
+
+
+
+
+
+
+
+
+
+var translate_result="  no-result"
+var future_result="  no-result"
+var continuous_result="  no-result"
+var past_result="  no-result"
+var participle_result="  no-result"
+var past_perfect_result="  no-result"
+var gerunds_result="  no-result"
+grammar_ai_search_button.addEventListener("click",function(){
+    
+    var input_text=grammar_ai_input
+    var translate_text=document.getElementById("translate")
+    var future_text=document.getElementById("future")
+    var continuous_text=document.getElementById("continuous")
+    var past_text=document.getElementById("past")
+    var past_perfect_text=document.getElementById("past_perfect")
+    var participle_text=document.getElementById("participle")
+    var gerunds_text=document.getElementById("gerunds")
+    for (var i=0;i<=word.length;i++){
+        if (grammar_ai_input.value==word[i])
+        {
+            var translate_result=translate[i]
+            var future_result=" will + "+input_text.value
+            var continuous_result=continuous[i]
+            var past_result=past[i]
+            var participle_result=participle[i]
+            var past_perfect_result=" had + "+participle[i]
+            var gerunds_result=gerunds[i]
+
+            translate_text.innerText="   "+translate_result
+            future_text.innerText=future_result
+            continuous_text.innerText="   "+continuous_result
+            past_text.innerText=past_text.innerText+"   "+past_result
+            past_perfect_text.innerText=past_perfect_result
+            participle_text.innerText="   "+participle_result
+            gerunds_text.innerText="   "+gerunds_result
+        }
+
+    }
+    
 })
