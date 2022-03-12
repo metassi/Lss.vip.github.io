@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ut_geographic</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0%;
+            background-color: rgb(183, 0, 255);
+        }
+        #main{
+            background-image: url(https://i.pinimg.com/originals/05/10/f4/0510f4e596283c0d961e4338565a93f3.gif);
+            background-size: 100vw 100vh;
+            background-repeat: repeat;
+            width: 100vw;
+            height: 100vh;
+        }
+        #top{
+            position: absolute;
+            background-color: navy;
+            /*border: 5px solid rgb(115, 255, 0);*/
+            margin: 0px;
+            width: 100vw;
+            height: 15vh;
+            float: left;
+        }
+        #top_title{
+            position: fixed;
+            font-size: 3vw;
+            font-style: italic;
+            color: white;
+            left: 0vw;
+            top: 1vh;
+
+        }
+        #home_button{
+            position: fixed; 
+            top: 5vh; 
+            right: 0; 
+            font-size: 2vw; 
+            border-radius: 20px; 
+            background-color: aqua;
+        }
+        #home_button:hover{
+            position: fixed; 
+            top: 5vh; 
+            right: 0; 
+            font-size: 2vw; 
+            border-radius: 20px; 
+            background-color: rgb(2, 218, 218);
+        }
+
+        #geo_content{
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%,-0%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #button_void{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 1.5vw;
+        }
+        #button_void button{
+            font-size: 2vw;
+            border-radius: 20px 20px 0px 0px;
+        }
+        #button_void button:hover{
+            font-size: 2vw;
+            border-radius: 20px 20px 0px 0px;
+            background-color: aqua;
+        }
+        #scope_content{
+            width: 35vw;
+            height: 50vh;
+            border-radius: 10px;
+            background-color: grey;
+            display: flex;
+            justify-content: top;
+            align-items: center;
+            flex-direction: column;
+            gap: 0px;
+        }
+        #geo_content h1{
+            height: 1.5vh;
+        }
+
+        #p1_content{
+            width: 55vw;
+            height: 390vh;
+            border-radius: 10px;
+            background-color: grey;
+            display: none;
+            justify-content: top;
+            align-items: right;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        #p2_content{
+            width: 55vw;
+            height: 250vh;
+            border-radius: 10px;
+            background-color: grey;
+            display: none;
+            justify-content: top;
+            align-items: right;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+
+        #subject_button{
+            position: fixed; 
+            top: 15vh; 
+            left: 1.1vw; 
+            font-size: 2vw; 
+            border-radius: 10px; 
+            background-color: aqua;
+        }
+        #subject_void{
+            display: none;
+            position: fixed;
+            top: 21vh;
+            left: 0vw;
+            width: 10vw;
+            height: 45vh;
+            background-color: grey;
+            border-radius: 10px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 3px;
+        }
+        #subject_void button{
+            font-size: 1.4vw;
+            background-color: aqua;
+            border-radius: 15px;
+            width: 7vw;
+        }
+
+        #img1{
+            width: 50vw;
+            height: 60vh;
+            margin-bottom: 3px;        }
+        #img2{
+            width: 50vw;
+            height: 80vh;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="top">
+            <h1 id="top_title" >UT.Geographic</h1>
+            <button id="home_button" >HOME</button>
+            <button id="subject_button" >Subject</button>
+            <div id="subject_void">
+                <button id="chinese_btn">Chinese</button>
+                <button id="english_btn">English</button>
+                <button id="math_btn">Math</button>
+                <button id="phys_btn">Phys</button>
+                <button id="chem_btn">Chem</button>
+                <button id="bio_btn">Bio</button>
+                <button id="chis_btn">Chis</button>
+                <button id="hist_btn">Hist</button>
+                <button id="geo_btn">Geo</button>
+            </div>
+            <h2 style="position: fixed; bottom: 0; right: 0; color: aqua;">Producer : 3D18 :)</h2>
+        </div>
+        <div id="geo_content">
+            <div id="button_void">
+                <button id="scope_button" style="background-color: aqua;">UT 範圍</button>
+                <button id="p1">單元 6.1</button>
+                <button id="p2">單元 6.2</button>
+            </div>
+
+            <div id="scope_content" >
+                <h1 style="font-size: 2vw;">地理 UT範圍:</h1>
+                <h1 style="font-size: 2vw;">第六冊:製造業全球轉移</h1>
+                <h1 style="font-size: 2vw; ">單元 6.1 ~ 6.2</h1>
+            </div>
+
+            <div id="p1_content">
+                <h1 style="font-size: 2vw; ">單元 6.1 (什麼是製造業)</h1>
+                <h1 style="font-size: 1.8vw;">1.產業</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; ">-產業是經過一連串經濟活動製造出來的,這些活動稱為產業.</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; ">-我們可以把產業分為四類:</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; ">-我們日常所稱的工業，是指第二產業或製造業:</h1>
+                <h1 style="font-size: 1.75vw;">a.初級產業</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; ">•開採和採集天然資源作原料</h1>
+                <h1 style="font-size: 1.5vw; color: greenyellow; ">•例子：採礦、伐木、耕作、捕魚</h1>
+                <h1 style="font-size: 1.75vw;">b.第二產業</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; ">•把原料或半製品製成製品</h1>
+                <h1 style="font-size: 1.5vw; color: greenyellow; ">•例子：能源、建築、製造業如紡織、鋼鐵</h1>
+                <h1 style="font-size: 1.75vw;">c.第三產業</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; ">•為其他行業或人士提供服務</h1>
+                <h1 style="font-size: 1.5vw; color: greenyellow; ">•例子：零售、公共服務</h1>
+                <h1 style="font-size: 1.75vw;">d.第四產業</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; ">•處理資訊和進行不同種類的研究工作</h1>
+                <h1 style="font-size: 1.5vw; color: greenyellow; ">• 例子：科技研究、軟件開發</h1>
+
+                <h1 style="font-size: 1.8vw;">2.製造業</h1>
+                <h1 style="font-size: 1.75vw;">a.製造業系統</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; margin-bottom: 5vh;">•製造業系統包含投入、過程和產出幾個環節，通常由家廠商管理。賺取的部分金錢會返回系統中，成為投入。</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">•投入 > 過程 > 產出 > 市場 > 現金 > 部分現金 > 投入。</h1>
+                <h1 style="font-size: 1.65vw;   ">a1.投入</h1>
+                <h1 style="font-size: 1.5vw; color: greenyellow; ">• 例子：資本,原料,土地,能源,勞工,運輸管理</h1>
+                <h1 style="font-size: 1.65vw;  ">a2.過程</h1>
+                <h1 style="font-size: 1.5vw; color: greenyellow; ">• 例子：裁縫,紡紗,編織</h1>
+                <h1 style="font-size: 1.65vw;  ">a3.產出</h1>
+                <h1 style="font-size: 1.5vw; color: greenyellow; ">• 例子：工業廢料,有用製品</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; margin-bottom: 5vh;">製造過程會把一種投人轉化成另一種形式。顧客的製品就是有用的產出，在製造過程中，投入會增值。</h1>
+
+                <h1 style="font-size: 1.75vw;">b.製造業的區位因素</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; margin-bottom: 5vh;">•製造業廠商會考盧不同的區位因素，例如原料、勞工和市場等，來決定在哪裏生產製品</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; ">•不同工業的區位因素不盡相同。</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; ">•區位因素包括: 原料,勞工,市場,土地,能源</h1>
+                <h1 style="font-size: 1.65vw;  ">b1.區位因素例子</h1>
+                <h1 style="font-size: 1.5vw; color: greenyellow; ">• 海產加工業(原料)</h1>
+                <h1 style="font-size: 1.5vw; color: greenyellow; margin-bottom: 5vh;">-- 魚類和其他海洋物種屬於原料，是易腐的，因此工廠需鄰近原料，以便加工。這是一種原料導向工業。</h1>
+                <h1 style="font-size: 1.5vw; color: greenyellow; ">• 造船業(土地)</h1>
+                <h1 style="font-size: 1.5vw; color: greenyellow; margin-bottom: 5vh;">-- 這種工業的原料、機器和製品均佔用大片土地。因此，面積龐大的士地是這種工業的重要區位因素。</h1>
+                <h1 style="font-size: 1.2vw; color: greenyellow; ">*更多例子見書第八頁</h1>
+
+                <h1 style="font-size: 1.75vw;">c.製造業的分類</h1>
+                <h1 style="font-size: 1.65vw;   ">c1.原料和製品的重量</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; ">•輕工業</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; ">--使用輕巧的原料</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; ">--生產輕便的製品</h1>
+                <h1 style="font-size: 1.5vw; color: greenyellow; ">----例子：電子業</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; ">•重工業</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; ">--使用笨重的原料</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; ">--生產笨重的製品</h1>
+                <h1 style="font-size: 1.5vw; color: greenyellow; ">----例子：飛機製造業</h1>
+
+                <h1 style="font-size: 1.65vw;   ">c2.勞工及資本的投入</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; ">•勞力密集工業</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; ">--生產過程僱用大量勞工</h1>
+                <h1 style="font-size: 1.5vw; color: greenyellow; ">----例子：造鞋業</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; ">•資本密集工業</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; ">--生產過程投入大量資本</h1>
+                <h1 style="font-size: 1.5vw; color: greenyellow; ">----例子：汽車製造業</h1>
+
+                <h1 style="font-size: 1.65vw;   ">c3.科技研究和發展的水平</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; ">•低科技工業</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; ">--使用傳統的生產方法</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; ">--用於研究的資金和人才投入少</h1>
+                <h1 style="font-size: 1.5vw; color: greenyellow; ">----例子：陶瓷業</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; ">•高科技工業</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; ">--使用先進科技</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; ">--用於研究的資金和人才投入多</h1>
+                <h1 style="font-size: 1.5vw; color: greenyellow; ">----例子：製藥業</h1>
+                
+                
+            </div>
+            <div id="p2_content">
+                <h1 style="font-size: 2vw; ">單元 6.2 (我們的工廠都到哪裏去了)</h1>
+                <h1 style="font-size: 1.8vw;">1.香港的製造業重要性有什麼轉變</h1>
+                <h1 style="font-size: 1.75vw;">a.製造業的巔峰</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; ">•在1970年代香港是世界著名的工業中心。那時製造業僱用了差不多半數的工作人口</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; margin-bottom: 5vh;">•製造業成為香港最大的僱主。同時，製造業在香港經濟也有舉足輕重的地位,佔本地生產總值約四分之一</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; ">•製衣、紡織和塑膠玩具是當時最重要的工業製品，主要用作出口</h1>
+                <h1 style="font-size: 1.75vw;">b.製造業的衰落</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; ">•香港的製造業自1980年代起開始衰落</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">•不少勞力密集工業，例如製衣、紡織和塑膠業等均遷離香港</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; ">•製造業在香港本地經濟的重要性已由第三產業取代</h1>
+
+                <h1 style="font-size: 1.8vw; margin-bottom: 5vh;">2.1950年代以來香港的工業發展</h1>
+                <img src="geo1.png" id="img1">
+                <img src="geo2.png" id="img2">
+
+                <h1 style="font-size: 1.8vw;">3.香港的生產模式有什麼改變</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; margin-bottom: 5vh;">•過去，製造業廠商會把總部和製造業活動設在同一地點。這種生產模式稱為單邊區位生產.</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;  margin-bottom: 5vh;">•但是，這種生產模式自1980年代起轉變。不少製造業廠商為了節省成本，把工廠遷到珠江三角洲區域</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; ">•總部則留在香港，監督高增值製造業活動，例如設計、研究和發展，以及市場推廣</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; ">•把製造業活動設在不同地區的生座模式，稱為多邊區位生產.</h1>
+                
+                
+
+
+            </div>
+            
+            
+            
+        </div>
+        
+    </div>
+    <script>
+        var home_button=document.getElementById("home_button")
+
+        var scope_button=document.getElementById("scope_button")
+        var p1_button=document.getElementById("p1")
+        var p2_button=document.getElementById("p2")
+        var main=document.getElementById("main")
+        var scope_content=document.getElementById("scope_content")
+        var p1_content=document.getElementById("p1_content")
+        var p2_content=document.getElementById("p2_content")
+
+        var subject_void=document.getElementById("subject_void")
+        var subject_button=document.getElementById("subject_button")
+        var chinese_btn=document.getElementById("chinese_btn")
+        var english_btn=document.getElementById("english_btn")
+        var math_btn=document.getElementById("math_btn")
+        var phys_btn=document.getElementById("phys_btn")
+        var chem_btn=document.getElementById("chem_btn")
+        var bio_btn=document.getElementById("bio_btn")
+        var chis_btn=document.getElementById("chis_btn")
+        var hist_btn=document.getElementById("hist_btn")
+        var geo_btn=document.getElementById("geo_btn")
+         
+        var num1=0
+        subject_button.addEventListener("click",function(){
+            if (num1==0){
+                subject_void.style.display="flex"
+                num1=1
+            }
+            else{
+                subject_void.style.display="none"
+                num1=0
+            }
+            
+        })
+        chinese_btn.addEventListener("click",function(){
+            window.location=("ut_chinese.html")
+        })
+        english_btn.addEventListener("click",function(){
+            window.location=("ut_english.html")
+        })
+        math_btn.addEventListener("click",function(){
+            window.location=("ut_math.html")
+        })
+        phys_btn.addEventListener("click",function(){
+            window.location=("ut_phys.html")
+        })
+        chem_btn.addEventListener("click",function(){
+            window.location=("ut_chem.html")
+        })
+        bio_btn.addEventListener("click",function(){
+            window.location=("ut_bio.html")
+        })
+        chis_btn.addEventListener("click",function(){
+            window.location=("ut_chis.html")
+        })
+        hist_btn.addEventListener("click",function(){
+            window.location=("ut_hist.html")
+        })
+        geo_btn.addEventListener("click",function(){
+            window.location=("ut_geo.html")
+        })
+
+        scope_button.addEventListener("click",function(){
+            scope_button.style.backgroundColor="aqua"
+            p1_button.style.backgroundColor="white"
+            p2_button.style.backgroundColor="white"
+            scope_content.style.display="flex"
+            p1_content.style.display="none"
+            p2_content.style.display="none"
+            main.style.height="100vh"
+
+        })
+        p1_button.addEventListener("click",function(){
+            scope_button.style.backgroundColor="white"
+            p1_button.style.backgroundColor="aqua"
+            p2_button.style.backgroundColor="white"
+            scope_content.style.display="none"
+            p1_content.style.display="flex"
+            p2_content.style.display="none"
+            main.style.height="420vh"
+
+        })
+
+        p2_button.addEventListener("click",function(){
+            scope_button.style.backgroundColor="white"
+            p1_button.style.backgroundColor="white"
+            p2_button.style.backgroundColor="aqua"
+            scope_content.style.display="none"
+            p1_content.style.display="none"
+            p2_content.style.display="flex"
+            main.style.height="280vh"
+
+        })
+
+
+        home_button.addEventListener("click",function(){
+            window.location="Home_page.html"
+        })
+    </script>
+</body>
+</html>

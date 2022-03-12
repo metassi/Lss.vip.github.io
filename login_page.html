@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSS_Revision_Login_Page</title>
+    
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0%;
+            background-color: grey;
+        }
+        #main{
+            background-image: url(https://i.pinimg.com/originals/05/10/f4/0510f4e596283c0d961e4338565a93f3.gif);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100vw;
+            height: 100vh;
+        }
+        #top{
+            position: fixed;
+            background-color: navy;
+            /*border: 5px solid rgb(115, 255, 0);*/
+            margin: 0px;
+            width: 100vw;
+            height: 15vh;
+            
+            
+        }
+        #top_title{
+            position: fixed;
+            font-size: 3vw;
+            font-style: italic;
+            color: white;
+            left: 0vw;
+            top: 1vh;
+
+        }
+        @keyframes color_change{
+            0%{background-color: rgb(255, 56, 56);}
+            20%{background-color: rgb(196, 3, 180);}
+            40%{background-color: rgb(241, 82, 255);}
+            60%{background-color: rgb(255, 61, 61);}
+            80%{background-color: rgb(241, 82, 255);}
+            100%{background-color: rgb(196, 3, 180);}
+        }
+        #login_div{
+            position: absolute;
+            background-color: purple;
+            left: 0px;
+            top: 0px;
+            width: 25vw;
+            height: 25vh;
+            left: 50%;
+            top: 50vh;
+            transform: translate(-50%,-50%);
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            opacity: 0.8;
+            animation-name: color_change;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+
+        #login_div input{
+            width: 15vw;
+            height: 3.5vh;
+            font-size: 1.5vw;
+            display: block;
+            border: 3px ridge black;
+            border-radius: 10px;
+        }
+
+        #login_div button{
+            font-size: 1.5vw;
+            border-radius: 20px;
+        }
+
+        #language{
+            position: fixed;
+            top: 6vh;
+            right: 20vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 3px;
+        }
+        #language button{
+            background-color: white;
+            font-size: 1.5vw;
+            border-radius: 30px;
+        }
+        #language button:hover{
+            background-color: rgb(121, 255, 139);
+            font-size: 1.5vw;
+            border-radius: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="top">
+            <h1 id="top_title" >LSS.V.I.P</h1>
+            <h2 style="position: fixed; bottom: 0; right: 0; color: aqua;">Producer : 3D18 :)</h2>
+        </div>
+        <div id="login_div" >
+            <input type="text"  id="name_input" style="display: block;" placeholder="Username:">
+            <input type="password"  id="password_input" placeholder="password:">
+            <button  id="confirm_button" style="font-size: 1.2vw;">確認資料</button>
+            <button  id="login_button" >登錄</button>
+
+        </div>
+        <div id="language">
+            <button id="chinese">中文</button>
+            <button id="english">Eng</button>
+
+        </div>
+        
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script >
+        var confirm_button=document.getElementById("confirm_button");
+        var login_button=document.getElementById("login_button");
+        var log_div=document.getElementById("login_div");
+        var other=document.getElementById("other");
+        var chinese_language=document.getElementById("chinese")
+        var english_language=document.getElementById("english")
+        var show_num=0
+        //username and password
+        var name_info=["Jasonken","Lyc","Kyy","Kxy","fatchicken","VIP","xxxxxx"];
+        var password_info=["131688","0515","1101","1102","1103","0000","xxxxxx"];
+        confirm_button.addEventListener("click",function(){
+            
+            var name_input=document.getElementById("name_input");
+            var password_input=document.getElementById("password_input");
+            for(var i=0;i<name_info.length;i++){
+                if (name_input.value==name_info[i]){
+                    if (password_input.value==password_info[i]){
+            
+                        
+                        
+                        
+                        show_num=1
+                        break
+                        
+                    }
+                    
+                }
+            }
+        
+            if (show_num==0){alert("Username or Password incorect")}
+            else{
+                    var nam=name_input.value
+                    Email.send({
+                        Host : "smtp.elasticemail.com",
+                        Username : "jasonken2007@gmail.com",
+                        Password : "04CDDE32C5CC47DE876675D68DE6E1E89661",
+                        To : 'jasonken2007@gmail.com',
+                        From : "jasonken2007@gmail.com",
+                        Subject : "Login Hint",
+                        Body :nam +" Logined just now"
+                    }).then(
+                        message=>alert("confirmed")
+                    );
+                }
+        }) 
+
+
+        var chinese_l=true
+        var english_l=false
+
+        login_button.addEventListener("click",function(){
+            if (show_num==1){
+                alert("Welcome "+name_input.value)
+                window.location="Home_page.html"
+            }
+            else{
+                if (chinese_l){
+                    alert("請先點擊確認按鈕")
+                }
+                else{
+                    alert("pls click confirm button first")
+                }
+
+            }
+
+        })
+
+        chinese_language.addEventListener("click",function(){
+            chinese_l=true
+            english_l=false
+            chinese_language.style.backgroundColor="green"
+            english_language.style.backgroundColor="white"
+            login_button.innerText="登錄"
+            confirm_button.innerText="確認資料"
+
+
+        })
+        english_language.addEventListener("click",function(){ 
+            english_l=true
+            chinese_l=false
+            english_language.style.backgroundColor="green"
+            chinese_language.style.backgroundColor="white"
+            login_button.innerText="Login"
+            confirm_button.innerText="confirm"
+            
+        })
+            
+    </script>
+
+</body>
+</html>

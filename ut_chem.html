@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ut_chemistry</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0%;
+            background-color: rgb(183, 0, 255);
+        }
+        #main{
+            background-image: url(https://i.pinimg.com/originals/05/10/f4/0510f4e596283c0d961e4338565a93f3.gif);
+            background-size: 100vw 100vh;
+            background-repeat: repeat;
+            width: 100vw;
+            height: 100vh;
+        }
+        #top{
+            position: absolute;
+            background-color: navy;
+            /*border: 5px solid rgb(115, 255, 0);*/
+            margin: 0px;
+            width: 100vw;
+            height: 15vh;
+            float: left;
+        }
+        #top_title{
+            position: fixed;
+            font-size: 3vw;
+            font-style: italic;
+            color: white;
+            left: 0vw;
+            top: 1vh;
+
+        }
+        #home_button{
+            position: fixed; 
+            top: 5vh; 
+            right: 0; 
+            font-size: 2vw; 
+            border-radius: 20px; 
+            background-color: aqua;
+        }
+        #home_button:hover{
+            position: fixed; 
+            top: 5vh; 
+            right: 0; 
+            font-size: 2vw; 
+            border-radius: 20px; 
+            background-color: rgb(2, 218, 218);
+        }
+
+        #chem_content{
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%,-0%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #button_void{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 1.5vw;
+        }
+        #button_void button{
+            font-size: 2vw;
+            border-radius: 20px 20px 0px 0px;
+        }
+        #button_void button:hover{
+            font-size: 2vw;
+            border-radius: 20px 20px 0px 0px;
+            background-color: aqua;
+        }
+        #scope_content{
+            width: 40vw;
+            height: 50vh;
+            border-radius: 10px;
+            background-color: grey;
+            display: flex;
+            justify-content: top;
+            align-items: center;
+            flex-direction: column;
+            gap: 0px;
+        }
+        #chem_content h1{
+            height: 1.8vh;
+        }
+
+        #g6a_content{
+            width: 55vw;
+            height: 530vh;
+            border-radius: 10px;
+            background-color: grey;
+            display: none;
+            justify-content: top;
+            align-items: right;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        #g6c_content{
+            width: 55vw;
+            height: 470vh;
+            border-radius: 10px;
+            background-color: grey;
+            display: none;
+            justify-content: top;
+            align-items: right;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        #g8c_content{
+            width: 55vw;
+            height: 720vh;
+            border-radius: 10px;
+            background-color: grey;
+            display: none;
+            justify-content: top;
+            align-items: right;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        #subject_button{
+            position: fixed; 
+            top: 15vh; 
+            left: 1.1vw; 
+            font-size: 2vw; 
+            border-radius: 10px; 
+            background-color: aqua;
+        }
+        #subject_void{
+            display: none;
+            position: fixed;
+            top: 21vh;
+            left: 0vw;
+            width: 10vw;
+            height: 45vh;
+            background-color: grey;
+            border-radius: 10px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 3px;
+        }
+        #subject_void button{
+            font-size: 1.4vw;
+            background-color: aqua;
+            border-radius: 15px;
+            width: 7vw;
+    
+        }
+        img{
+            width: 40vw;
+            height: 60vh;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="top">
+            <h1 id="top_title" >UT.Chemistry</h1>
+            <button id="home_button" >HOME</button>
+            <button id="subject_button" >Subject</button>
+            <div id="subject_void">
+                <button id="chinese_btn">Chinese</button>
+                <button id="english_btn">English</button>
+                <button id="math_btn">Math</button>
+                <button id="phys_btn">Phys</button>
+                <button id="chem_btn">Chem</button>
+                <button id="bio_btn">Bio</button>
+                <button id="chis_btn">Chis</button>
+                <button id="hist_btn">Hist</button>
+                <button id="geo_btn">Geo</button>
+            </div>
+            <h2 style="position: fixed; bottom: 0; right: 0; color: aqua;">Producer : 3D18 :)</h2>
+        </div>
+        <div id="chem_content">
+            <div id="button_void">
+                <button id="scope_button" style="background-color: aqua;">UT 範圍</button>
+                <button id="6a">原子結構</button>
+                <button id="6c">週期表</button>
+                <button id="8c">離子鍵</button>
+            </div>
+
+            <div id="scope_content" >
+                <h1 style="font-size: 2vw;">化學 UT範圍:</h1>
+                <h1 style="font-size: 2vw;">筆記(p1-35)</h1>
+                <h1 style="font-size: 2vw;">原子結構(ch.5)</h1>
+                <h1 style="font-size: 2vw;">週期表(ch.6)</h1>
+                <h1 style="font-size: 2vw; ">離子鍵(ch.7.1 ~ 7.6)</h1>
+
+                
+            </div>
+
+            <div id="g6a_content">
+                <h1 style="font-size: 2vw; ">ch.5 原子結構</h1>
+                <h1 style="font-size: 1.8vw;">1.原子</h1>
+                <h1 style="font-size: 1.75vw;">a.原子的定義</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-原子是指一元素的最小粒子</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-不同元素擁有不同的原子</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua; margin-bottom: 5vh;">-由於不同的元素是由不同種類的原子組成，故它們的性質各有不同。現時已發現了 118 種原子，它們分別來自 118 種不同的元素。</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-不同元素的原子有着不同的大小和質量</h1>
+                <h1 style="font-size: 1.75vw;">b.原子的基本結構</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-質量集中於其中心的一個極細小的範圍内 ：原子核</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-原子核内有兩種粒子：質子和中子</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-原子核被一團迅速移動的電子圍繞着，該電子團構成原子大部分的體積</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-質子、中子和電子統稱為次原子粒子</h1>
+                <h1 style="font-size: 1.8vw;">2.元素</h1>
+                <h1 style="font-size: 1.75vw;">a.元素的定義</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-元素是只由一種原子組成的物質</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-只由一種原子組成不代表只有一粒原子</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-不同的元素因由不同的原子所組成，所以有不同的性質</h1> 
+                <h1 style="font-size: 1.75vw;">b.元素分類</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-元素主要分為金屬及非金屬</h1> 
+                <img src="chem1.png" >
+                <h1 style="font-size: 1.5vw; color: aqua;">-半金屬</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-同時具有金屬與非金屬的某些性質</h1> 
+                <h1 style="font-size: 1.8vw;">3.次原子粒子</h1>
+                <h1 style="font-size: 1.75vw;">a.次原子粒子基本資料</h1>
+                <img src="chem2.png" >
+                <h1 style="font-size: 1.5vw; color: aqua;">-不同的原子有不同數量的質子,電子和中子</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-每種元素的中子的數目不定</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua; margin-bottom: 5vh;">-雖然原子含有帶電荷的粒子，但由於它的質子數目和電子數目相等，故它在整體上並不帶電荷。換句話說，原子是電中性的</h1> 
+                <h1 style="font-size: 1.8vw;">4.化合物</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-化合物是由兩種或以上元素經過化學反應結合而成的純物質</h1> 
+                <h1 style="font-size: 1.5vw; color: greenyellow; ">Ep1: 水(H0）由兩種不同的原子所組成（氫原子和氧原子）</h1>
+                <h1 style="font-size: 1.8vw;">5.混合物</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-混合物由兩種或以上的純物質未經化學反應混合而成</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-因此能以物理方法分離混合物</h1> 
+                <h1 style="font-size: 1.5vw; color: greenyellow; ">Ep1: 鹽水，能以蒸餾分離當中的鹽和水</h1>
+                <h1 style="font-size: 1.8vw;">6.原子序&質量數</h1>
+                <h1 style="font-size: 1.75vw;">a.原子序</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-元素的原子序 = 該元素原子內的質子數目</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-每種元素的原子序都是獨一無二</h1> 
+                <h1 style="font-size: 1.75vw;">b.質量數</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-質量數 = 質子數目 + 中子數目</h1> 
+                <h1 style="font-size: 1.8vw;">7.同位素</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-同一種元素的原子，它們的原子核具有相同數目的質子</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-但是，它們的質量未必相同</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-這些同一元素的不同原子稱為同位素</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua; margin-bottom: 5vh;">-同位素是同一種元素的不同原子，它們具有相同數目的質子，但有不同中子的數目（重要）</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-大部分元素都有多於一種同位素</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-同位素的化學性質相同，因為它們有相同數目的電子</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-元素的化學性質取決於其原子所具電子的數目</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-物理性質存在輕微的差異（基於原子的質量不同)</h1>
+                <h1 style="font-size: 1.8vw;">8.相對質量</h1> 
+                <h1 style="font-size: 1.75vw;">a.相對同位素質量</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-相對同位素質量 = 該同位素的質量數</h1> 
+                <h1 style="font-size: 1.75vw;">b.相對豐度</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-指某元素的特定同位素在自然界的含量比例)</h1> 
+                <h1 style="font-size: 1.75vw;">c.相對原子質量</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-全部同位素相對豐度× 全部同位素的相對同位素質量</h1> 
+
+                <h1 style="font-size: 1.8vw;">9.原子內的電子排佈</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-第一層最多可容納2個電子</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-第一層最多可容納8個電子</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-第一層最多可容納18個電子</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-第一層最多可容納32個電子</h1> 
+                <h1 style="font-size: 1.75vw;">a.電子填入電子層的規則</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-電子會先填入最接近原子核的第一層電子層</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-填滿第一層後，其餘的電子會填入第二層，然後再填人第三層，如此類推</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-最外電子層不可以容納多過8個電子</h1>
+                
+            
+            </div>
+            <div id="g6c_content">
+                <h1 style="font-size: 2vw; ">ch.6 週期表</h1>
+                <h1 style="font-size: 1.8vw;">1.週期表</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-化學家把具有相似性質的元素歸入同一組別</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-元素都按原子序由小至大順序排列</h1>
+                <h1 style="font-size: 1.75vw;">a.週期</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-週期表中的橫排稱為週期</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-元素的周期數 == 被電子佔用的電子層數目</h1>
+                <h1 style="font-size: 1.75vw;">b.族</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-縱行稱為族</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-從左至右順序為第I族至第VII族,位於最右方的是第0族</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-除了第0族,元素的族素=最外電子層的電子數目</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-在第0族中,He最外層有兩個電子,而其他成員最外層有8粒</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-第II族和第III族之間的元素是過渡金屬</h1>
+                <h1 style="font-size: 1.65vw; ">b1.部分在週期表中的最有特別的名稱</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">族: 第I族-----名稱: 鹼金屬</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">族: 第II族----名稱: 鹼土金屬</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">族: 第VII族--名稱: 鹵素</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">族: 第0族-----名稱: 貴氣體</h1>
+                <h1 style="font-size: 1.8vw;">2.週期表中的規律</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-從左至右橫越一週期,元素有金屬過渡為半金屬,再過渡為非金屬.</h1> 
+                <h1 style="font-size: 1.75vw;">a.同族的相似化學性質</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-元素的化學性質主要受最外層電子數目所影響.</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-因同族元素有相同的最外層電子數,因此同族元素有相似的化學性質.</h1> 
+                <h1 style="font-size: 1.8vw;">3.相似性及趨勢</h1>
+                
+                <h1 style="font-size: 1.75vw;">a.第I族元素--鹼金屬</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-鋰,鈉,鉀,銣,銫,鈁.</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-他們都能與水反應,並產生鹼,所以稱為鹼金屬.</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-第0族元素原子內被電子佔用的電子層的數目,由上至下遞增.</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-熔點和沸點會由上至下依次遞減.</h1> 
+                
+                <h1 style="font-size: 1.65vw;">a1.第I族元素相似的性質</h1>
+                <h1 style="font-size: 1.5vw; color: aqua; margin-bottom: 5vh;">-它們都是軟金屬，可用刀切割，切割一刻會展示銀色的光澤，但會迅速地在空氣中失去光澤（氧化)</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-密度低：鋰、鈉和鉀都能浮於水面</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-它們非常活潑，所以必須貯存於石蠟油中，防止它們與空氣反應.</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-會與水產生劇烈的化學反應，釋出氫氣和生成鹼性溶液.eg.鈉＋水＞氫＋氫氧化鈉.</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-會與某些非金屬反應，生成稱為鹽的化合物.eg.鈉＋氯 之氯化鈉..</h1>
+
+                <h1 style="font-size: 1.65vw;">a2.第I族元素活潑性的差異</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-元素的活潑性由上至下依次遞增.</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-活性在族内由上至下遞增.</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-處理第I族應有的安全措施:配戴安全眼鏡,使用安全擋板.</h1> 
+
+                <h1 style="font-size: 1.75vw;">b.第II族元素--鹼土金屬</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-這些元素可在泥士中找到，並能與水反應生成鹼＞稱為鹼土金屬.</h1> 
+                <h1 style="font-size: 1.65vw;">b1.第II族元素相似的性質</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-它們的密度低.</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-活性都較鹼金屬低.</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-它們都是活潑的金屬，與稀氫氯酸反應時會釋出氫氣.</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-它們會與某些非金屬反應，生成稱為鹽的化合物。.</h1> 
+                <h1 style="font-size: 1.65vw;">b2.第II族元素活潑性的差異</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-元素的活潑性由上至下依次遞增..</h1> 
+
+                <h1 style="font-size: 1.75vw;">c.第VII族元素--鹵素</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-這些元素能與大部分的金屬反應，並生成鹽，所以稱為鹵素.</h1> 
+                <h1 style="font-size: 1.65vw;">c1.第VII族元素相似的性質</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-它們都有毒.</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-它們都是活潑的元素.</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-它們都是非金屬.</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-它們會與金屬反應，生成稱為鹽的化合物.</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-它們均會與非金屬反應，生成共價化合物.</h1> 
+                <h1 style="font-size: 1.65vw;">c2.第VII族元素活潑性的差異</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-元素的活潑性由上至下依次漸降.</h1> 
+
+                <h1 style="font-size: 1.75vw;">d.第0族元素--貴氣體</h1>
+                <h1 style="font-size: 1.65vw;">d1.第0族元素相似的性質</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-在常温常壓下，它們都是無色的氣體.</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-它們都極不活潑.</h1> 
+                <h1 style="font-size: 1.65vw;">d2.第0族元素的穩定性</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-除了氦之外，所有貴氣體的原子均有 8個最外層電子.</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua; margin-bottom: 5vh;">-氦原子在它唯一被電子佔據的電子層裏則有2個電子。這說明了粒子在下列情況下會異常穩定:</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">--具有几隅體的電子排佈(即有8個最外層電子).</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">--具有電子偶的電子排佈(即在唯一被電子佔據的電子層裏有2個電子).</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua; margin-bottom: 5vh;">-貴氣體以外的元素原子通常都不太穩定，但當它們達至八陽體結構或電子偶結構時，便會變得穩定.</h1> 
+                <h1 style="font-size: 1.65vw;">d3.八偶體規則</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-原子達至貴氣體電子排佈(即有8個最外層電子）從而變得穩,稱為八隅體規則.</h1> 
+                <h1 style="font-size: 1.65vw;">d4.第0族元素的用途</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-He---充填氣球和氣船.</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-Ne---充填廣告燈箱.</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-Ar---充填電燈泡.</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">***由於在高温下燈絲會與空氣（氧）反應，所以不宜用空氣來充填電燈泡.</h1> 
+            
+                
+
+            </div>
+            <div id="g8c_content">
+                <h1 style="font-size: 2vw; ">ch.7.1 ~ 7.6離子鍵</h1>
+                <h1 style="font-size: 1.8vw;">1.八偶體規則</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">-原子達至貴氣體電子排佈(即有8個最外層電子）從而變得穩,稱為八隅體規則.</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-如原子末達至貴氣體電子排佈，通常是不穩定</h1>
+                <h1 style="font-size: 1.8vw;">2.化學鏈</h1> 
+                <h1 style="font-size: 1.7vw; color: rgb(0, 0, 0);">a.化學鏈的定義</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-貴氣體原子的電子排佈十分穩定 (eg. Ar, Ne, He)</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua; margin-bottom: 5vh;">-其他元素的原子會傾向於達到像貴氣體原子般穩定的電子排佈，為此它們會鍵合起來</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">-粒子互相連結的引力稱為化學鍵</h1> 
+                <h1 style="font-size: 1.7vw; color: rgb(0, 0, 0);">b.化學鍵的種類</h1>
+                <h1 style="font-size: 1.5vw; color: aqua;">b1.離子鍵：主要存在於由金屬和非金屬生成的化合物中</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">b2.共價鍵：主要存在於非金屬及只由非金屬生成的化合物中</h1> 
+                <h1 style="font-size: 1.5vw; color: aqua;">b3.金屬鍵：只存在於金屬中</h1> 
+
+            
+            
+
+            
+            </div>
+            
+            
+        </div>
+        
+    </div>
+    <script>
+        var home_button=document.getElementById("home_button")
+
+        var scope_button=document.getElementById("scope_button")
+        var g6a_button=document.getElementById("6a")
+        var g6c_button=document.getElementById("6c")
+        var g8c_button=document.getElementById("8c")
+        var main=document.getElementById("main")
+        var scope_content=document.getElementById("scope_content")
+        var g6a_content=document.getElementById("g6a_content")
+        var g6c_content=document.getElementById("g6c_content")
+        var g8c_content=document.getElementById("g8c_content")
+
+        var subject_void=document.getElementById("subject_void")
+        var subject_button=document.getElementById("subject_button")
+        var chinese_btn=document.getElementById("chinese_btn")
+        var english_btn=document.getElementById("english_btn")
+        var math_btn=document.getElementById("math_btn")
+        var phys_btn=document.getElementById("phys_btn")
+        var chem_btn=document.getElementById("chem_btn")
+        var bio_btn=document.getElementById("bio_btn")
+        var chis_btn=document.getElementById("chis_btn")
+        var hist_btn=document.getElementById("hist_btn")
+        var geo_btn=document.getElementById("geo_btn")
+         
+        var num1=0
+        subject_button.addEventListener("click",function(){
+            if (num1==0){
+                subject_void.style.display="flex"
+                num1=1
+            }
+            else{
+                subject_void.style.display="none"
+                num1=0
+            }
+            
+        })
+        chinese_btn.addEventListener("click",function(){
+            window.location=("ut_chinese.html")
+        })
+        english_btn.addEventListener("click",function(){
+            window.location=("ut_english.html")
+        })
+        math_btn.addEventListener("click",function(){
+            window.location=("ut_math.html")
+        })
+        phys_btn.addEventListener("click",function(){
+            window.location=("ut_phys.html")
+        })
+        chem_btn.addEventListener("click",function(){
+            window.location=("ut_chem.html")
+        })
+        bio_btn.addEventListener("click",function(){
+            window.location=("ut_bio.html")
+        })
+        chis_btn.addEventListener("click",function(){
+            window.location=("ut_chis.html")
+        })
+        hist_btn.addEventListener("click",function(){
+            window.location=("ut_hist.html")
+        })
+        geo_btn.addEventListener("click",function(){
+            window.location=("ut_geo.html")
+        })
+
+        scope_button.addEventListener("click",function(){
+            scope_button.style.backgroundColor="aqua"
+            g6a_button.style.backgroundColor="white"
+            g6c_button.style.backgroundColor="white"
+            g8c_button.style.backgroundColor="white"
+            scope_content.style.display="flex"
+            g6a_content.style.display="none"
+            g6c_content.style.display="none"
+            g8c_content.style.display="none"
+            main.style.height="100vh"
+
+        })
+        g6a_button.addEventListener("click",function(){
+            scope_button.style.backgroundColor="white"
+            g6a_button.style.backgroundColor="aqua"
+            g6c_button.style.backgroundColor="white"
+            g8c_button.style.backgroundColor="white"
+            scope_content.style.display="none"
+            g6a_content.style.display="flex"
+            g6c_content.style.display="none"
+            g8c_content.style.display="none"
+            main.style.height="560vh"
+
+        })
+
+        g6c_button.addEventListener("click",function(){
+            scope_button.style.backgroundColor="white"
+            g6a_button.style.backgroundColor="white"
+            g6c_button.style.backgroundColor="aqua"
+            g8c_button.style.backgroundColor="white"
+            scope_content.style.display="none"
+            g6a_content.style.display="none"
+            g6c_content.style.display="flex"
+            g8c_content.style.display="none"
+            main.style.height="500vh"
+
+        })
+
+        g8c_button.addEventListener("click",function(){
+            scope_button.style.backgroundColor="white"
+            g6a_button.style.backgroundColor="white"
+            g6c_button.style.backgroundColor="white"
+            g8c_button.style.backgroundColor="aqua"
+            scope_content.style.display="none"
+            g6a_content.style.display="none"
+            g6c_content.style.display="none"
+            g8c_content.style.display="flex"
+            main.style.height="760vh"
+        })
+
+        home_button.addEventListener("click",function(){
+            window.location="Home_page.html"
+        })
+    </script>
+</body>
+</html>
