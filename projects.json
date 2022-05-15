@@ -1,6 +1,6 @@
 {
-  project_name:'LSS_App'
-  ,link_url:'https://metassi.github.io/Lss.vip.github.io/login_page.html'
-  ,intro:'A web very very very very good'
-  ,img:'https://metassi.github.io/Lss.vip.github.io/lss-logo.png'
+  "project_name":"LSS_App",
+  "link_url":"https://metassi.github.io/Lss.vip.github.io/login_page.html",
+  "intro":"A web very very very very good",
+  "img":"https://metassi.github.io/Lss.vip.github.io/lss-logo.png"
 }
